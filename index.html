@@ -270,7 +270,7 @@
 <body class="bg-white">
     <!-- Navigation -->
     <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
-        <div class="container mx-auto px-6 lg:px-8">
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
                     <span class="text-2xl font-bold text-bus-dark">Buses</span>
@@ -302,20 +302,21 @@
     </nav>
 
     <!-- Section Hero avec image d'autocar -->
-    <section class="bg-white min-h-screen flex items-center relative overflow-hidden pt-20">
+    <section class="min-h-screen flex items-center relative overflow-hidden pt-20" style="background-image: url('https://i.ibb.co/9HVrXw2z/1.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="container mx-auto px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <!-- Contenu texte à gauche -->
                 <div class="max-w-2xl">
-                    <h1 class="text-5xl lg:text-6xl font-bold text-bus-dark mb-6 fade-in">
+                    <h1 class="text-5xl lg:text-6xl font-bold text-white mb-6 fade-in">
                         <span class="text-bus-orange" data-translate="hero_title">Buses Solutions</span>
                     </h1>
                     
-                    <h2 class="text-2xl lg:text-3xl font-semibold text-gray-700 mb-8 fade-in" style="animation-delay: 0.2s;" data-translate="hero_subtitle">
+                    <h2 class="text-2xl lg:text-3xl font-semibold text-white mb-8 fade-in" style="animation-delay: 0.2s;" data-translate="hero_subtitle">
                         Assistance professionnelle aux autocars en Europe
                     </h2>
                     
-                    <p class="text-xl text-gray-600 mb-8 fade-in" style="animation-delay: 0.4s;" data-translate="hero_description">
+                    <p class="text-xl text-gray-200 mb-8 fade-in" style="animation-delay: 0.4s;" data-translate="hero_description">
                         Votre partenaire de confiance pour l'assistance routière en Europe.
                     </p>
                     
@@ -382,27 +383,15 @@
                     </div>
                 </div>
                 
-                <!-- Image d'autocar à droite -->
-                <div class="flex justify-center lg:justify-end">
-                    <div class="relative">
-                        <img src="https://i.ibb.co/mFFZcQNj/Whats-App-Image-. -e0e3c5e9.jpg" 
-                             alt="Autocar Buses Solutions" 
-                             class="w-full max-w-lg h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
-                             onerror="this.style.display='none'; console.log('Image failed to load');">
-                        
-                        <!-- Éléments décoratifs autour de l'image -->
-                        <div class="absolute -top-4 -right-4 w-8 h-8 bg-bus-orange rounded-full opacity-80 animate-pulse"></div>
-                        <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-blue-500 rounded-full opacity-60 animate-pulse" style="animation-delay: 0.5s;"></div>
-                        <div class="absolute top-1/2 -left-8 w-4 h-4 bg-green-500 rounded-full opacity-70 animate-pulse" style="animation-delay: 1s;"></div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Section Services pour les Autocaristes -->
-    <section id="services" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6 lg:px-8">
+    <section id="services" class="py-20 relative" style="background-image: url('https://i.ibb.co/xSsdQKxG/2-Services-pour-les-Autocaristes.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="absolute inset-0 bg-white bg-opacity-90"></div>
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
                 <h2 class="text-4xl lg:text-5xl font-bold text-bus-dark mb-4" data-translate="services_title">
                     Services pour les Autocaristes
@@ -514,8 +503,9 @@
     </section>
 
     <!-- Section Nos Partenaires Principaux -->
-    <section id="partenaires" class="py-20 bg-white">
-        <div class="container mx-auto px-6 lg:px-8">
+    <section id="partenaires" class="py-20 relative" style="background-image: url('https://i.ibb.co/TB8rwZtK/3-Nos-Partenaires-Principaux.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="absolute inset-0 bg-white bg-opacity-90"></div>
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
                 <h2 class="text-4xl lg:text-5xl font-bold text-bus-dark mb-4">
                     Nos Partenaires <span class="text-bus-orange">Principaux</span>
@@ -645,8 +635,9 @@
     </section>
 
     <!-- Section Pour les Prestataires -->
-    <section id="prestataires" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6 lg:px-8">
+    <section id="prestataires" class="py-20 relative" style="background-image: url('https://i.ibb.co/MkrVjmjd/4-Pour-les-Prestataires.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="absolute inset-0 bg-gray-50 bg-opacity-90"></div>
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
                 <h2 class="text-4xl lg:text-5xl font-bold text-bus-dark mb-4">
                     Pour les <span class="text-bus-orange">Prestataires</span>
@@ -698,8 +689,9 @@
     </section>
 
     <!-- Section Formulaire de Contact -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-6 lg:px-8">
+    <section id="contact" class="py-20 relative" style="background-image: url('https://i.ibb.co/fddjWZnD/5-Formulaire-de-Contact-Footer.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="absolute inset-0 bg-white bg-opacity-90"></div>
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl lg:text-5xl font-bold text-bus-dark mb-4" data-translate="contact_title">
@@ -779,7 +771,7 @@
 
     <!-- Footer -->
     <footer class="bg-bus-dark text-white py-16">
-        <div class="container mx-auto px-6 lg:px-8">
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="md:col-span-2">
                     <div class="flex items-center mb-6">
@@ -837,5 +829,5 @@
             alert('Merci pour votre demande ! Nous vous recontacterons rapidement.');
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97d56787734dc8fe',t:'MTc1NzU3NTI0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97d56dfea235c8fe',t:'MTc1NzU3NTUxMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
