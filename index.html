@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buses Solutions - Assistance professionnelle aux autocars en Europe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bus-orange': '#FF6B35',
+                        'bus-dark': '#1A1A1A',
+                        'bus-gray': '#2D2D2D'
+                    }
+                }
+            }
+        }
+        
+        // Système de traduction multilingue
+        const translations = {
+            fr: {
+                title: "Buses Solutions - Assistance professionnelle aux autocars en Europe",
+                nav_services: "Services",
+                nav_partners: "Partenaires",
+                nav_providers: "Prestataires",
+                nav_contact: "Contact",
+                nav_demo: "Démo gratuite",
+                hero_title: "Buses Solutions",
+                hero_subtitle: "Assistance professionnelle aux autocars en Europe",
+                hero_description: "Votre partenaire de confiance pour l'assistance routière en Europe.",
+                hero_problem: "Un problème ? Nous sommes votre solution !",
+                hero_cta: "Demander une démo gratuite",
+                feature_24h: "Assistance 24h/24",
+                feature_24h_desc: "7j/7",
+                feature_network: "Réseau certifié",
+                feature_network_desc: "Dépanneurs et garages",
+                feature_coverage: "Couverture Europe",
+                feature_coverage_desc: "Juridique, traduction, suivi",
+                feature_time: "Gain de temps",
+                feature_time_desc: "Prise en charge complète",
+                services_title: "Services pour les Autocaristes",
+                services_subtitle: "Une assistance complète à portée de main",
+                contact_title: "Demander une démo",
+                contact_subtitle: "Nous pouvons également venir vous présenter Buses Solutions directement.",
+                form_name: "Nom",
+                form_email: "Email",
+                form_phone: "Téléphone",
+                form_vehicles: "Nombre de véhicules",
+                form_location: "Lieu du dépôt",
+                form_emergency: "Numéro d'urgence",
+                form_contact_me: "Je souhaite être recontacté par un expert Buses Solutions",
+                form_submit: "Demander une démo maintenant"
+            },
+            en: {
+                title: "Buses Solutions - Professional bus assistance in Europe",
+                nav_services: "Services",
+                nav_partners: "Partners",
+                nav_providers: "Providers",
+                nav_contact: "Contact",
+                nav_demo: "Free Demo",
+                hero_title: "Buses Solutions",
+                hero_subtitle: "Professional bus assistance in Europe",
+                hero_description: "Your trusted partner for roadside assistance in Europe.",
+                hero_problem: "A problem? We are your solution!",
+                hero_cta: "Request a free demo",
+                feature_24h: "24/7 Assistance",
+                feature_24h_desc: "Every day",
+                feature_network: "Certified Network",
+                feature_network_desc: "Breakdown services & garages",
+                feature_coverage: "Europe Coverage",
+                feature_coverage_desc: "Legal, translation, monitoring",
+                feature_time: "Time Saving",
+                feature_time_desc: "Complete support",
+                services_title: "Services for Bus Operators",
+                services_subtitle: "Complete assistance at your fingertips",
+                contact_title: "Request a demo",
+                contact_subtitle: "We can also come and present Buses Solutions to you directly.",
+                form_name: "Name",
+                form_email: "Email",
+                form_phone: "Phone",
+                form_vehicles: "Number of vehicles",
+                form_location: "Depot location",
+                form_emergency: "Emergency number",
+                form_contact_me: "I would like to be contacted by a Buses Solutions expert",
+                form_submit: "Request a demo now"
+            },
+            es: {
+                title: "Buses Solutions - Asistencia profesional para autocares en Europa",
+                nav_services: "Servicios",
+                nav_partners: "Socios",
+                nav_providers: "Proveedores",
+                nav_contact: "Contacto",
+                nav_demo: "Demo gratuita",
+                hero_title: "Buses Solutions",
+                hero_subtitle: "Asistencia profesional para autocares en Europa",
+                hero_description: "Su socio de confianza para la asistencia en carretera en Europa.",
+                hero_problem: "¿Un problema? ¡Somos su solución!",
+                hero_cta: "Solicitar una demo gratuita",
+                feature_24h: "Asistencia 24h/24",
+                feature_24h_desc: "7 días/7",
+                feature_network: "Red certificada",
+                feature_network_desc: "Servicios de grúa y talleres",
+                feature_coverage: "Cobertura Europa",
+                feature_coverage_desc: "Legal, traducción, seguimiento",
+                feature_time: "Ahorro de tiempo",
+                feature_time_desc: "Soporte completo",
+                services_title: "Servicios para Operadores de Autobuses",
+                services_subtitle: "Asistencia completa al alcance de su mano",
+                contact_title: "Solicitar una demo",
+                contact_subtitle: "También podemos venir a presentarle Buses Solutions directamente.",
+                form_name: "Nombre",
+                form_email: "Email",
+                form_phone: "Teléfono",
+                form_vehicles: "Número de vehículos",
+                form_location: "Ubicación del depósito",
+                form_emergency: "Número de emergencia",
+                form_contact_me: "Me gustaría ser contactado por un experto de Buses Solutions",
+                form_submit: "Solicitar una demo ahora"
+            },
+            pt: {
+                title: "Buses Solutions - Assistência profissional para autocarros na Europa",
+                nav_services: "Serviços",
+                nav_partners: "Parceiros",
+                nav_providers: "Prestadores",
+                nav_contact: "Contacto",
+                nav_demo: "Demo gratuita",
+                hero_title: "Buses Solutions",
+                hero_subtitle: "Assistência profissional para autocarros na Europa",
+                hero_description: "O seu parceiro de confiança para assistência rodoviária na Europa.",
+                hero_problem: "Um problema? Somos a sua solução!",
+                hero_cta: "Solicitar uma demo gratuita",
+                feature_24h: "Assistência 24h/24",
+                feature_24h_desc: "7 dias/7",
+                feature_network: "Rede certificada",
+                feature_network_desc: "Serviços de reboque e oficinas",
+                feature_coverage: "Cobertura Europa",
+                feature_coverage_desc: "Legal, tradução, acompanhamento",
+                feature_time: "Poupança de tempo",
+                feature_time_desc: "Suporte completo",
+                services_title: "Serviços para Operadores de Autocarros",
+                services_subtitle: "Assistência completa ao seu alcance",
+                contact_title: "Solicitar uma demo",
+                contact_subtitle: "Também podemos vir apresentar-lhe o Buses Solutions diretamente.",
+                form_name: "Nome",
+                form_email: "Email",
+                form_phone: "Telefone",
+                form_vehicles: "Número de veículos",
+                form_location: "Localização do depósito",
+                form_emergency: "Número de emergência",
+                form_contact_me: "Gostaria de ser contactado por um especialista da Buses Solutions",
+                form_submit: "Solicitar uma demo agora"
+            },
+            it: {
+                title: "Buses Solutions - Assistenza professionale per autobus in Europa",
+                nav_services: "Servizi",
+                nav_partners: "Partner",
+                nav_providers: "Fornitori",
+                nav_contact: "Contatto",
+                nav_demo: "Demo gratuita",
+                hero_title: "Buses Solutions",
+                hero_subtitle: "Assistenza professionale per autobus in Europa",
+                hero_description: "Il vostro partner di fiducia per l'assistenza stradale in Europa.",
+                hero_problem: "Un problema? Siamo la vostra soluzione!",
+                hero_cta: "Richiedere una demo gratuita",
+                feature_24h: "Assistenza 24h/24",
+                feature_24h_desc: "7 giorni/7",
+                feature_network: "Rete certificata",
+                feature_network_desc: "Servizi di soccorso e officine",
+                feature_coverage: "Copertura Europa",
+                feature_coverage_desc: "Legale, traduzione, monitoraggio",
+                feature_time: "Risparmio di tempo",
+                feature_time_desc: "Supporto completo",
+                services_title: "Servizi per Operatori di Autobus",
+                services_subtitle: "Assistenza completa a portata di mano",
+                contact_title: "Richiedere una demo",
+                contact_subtitle: "Possiamo anche venire a presentarvi Buses Solutions direttamente.",
+                form_name: "Nome",
+                form_email: "Email",
+                form_phone: "Telefono",
+                form_vehicles: "Numero di veicoli",
+                form_location: "Posizione del deposito",
+                form_emergency: "Numero di emergenza",
+                form_contact_me: "Vorrei essere contattato da un esperto di Buses Solutions",
+                form_submit: "Richiedere una demo ora"
+            }
+        };
+        
+        let currentLang = 'fr';
+        
+        function changeLanguage(lang) {
+            currentLang = lang;
+            const t = translations[lang];
+            
+            // Mettre à jour le titre de la page
+            document.title = t.title;
+            
+            // Mettre à jour tous les éléments avec data-translate
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (t[key]) {
+                    if (element.tagName === 'INPUT' && element.type === 'submit') {
+                        element.value = t[key];
+                    } else if (element.tagName === 'INPUT' && element.hasAttribute('placeholder')) {
+                        element.placeholder = t[key];
+                    } else {
+                        element.textContent = t[key];
+                    }
+                }
+            });
+            
+            // Mettre à jour les boutons de langue
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('bg-bus-orange', 'text-white');
+                btn.classList.add('bg-gray-200', 'text-gray-700');
+            });
+            document.querySelector(`[data-lang="${lang}"]`).classList.remove('bg-gray-200', 'text-gray-700');
+            document.querySelector(`[data-lang="${lang}"]`).classList.add('bg-bus-orange', 'text-white');
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 50%, #1A1A1A 100%);
+        }
+        
+        .road-animation {
+            animation: roadMove 3s ease-in-out infinite;
+        }
+        
+        @keyframes roadMove {
+            0%, 100% { transform: translateX(0px); }
+            50% { transform: translateX(10px); }
+        }
+        
+        .icon-bounce {
+            animation: iconBounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes iconBounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .pulse-orange {
+            animation: pulseOrange 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseOrange {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7); }
+            50% { box-shadow: 0 0 0 10px rgba(255, 107, 53, 0); }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-bus-dark">Buses</span>
+                    <span class="text-2xl font-bold text-bus-orange">Solutions</span>
+                </div>
+                
+                <!-- Sélecteur de langue -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <div class="flex space-x-1 bg-gray-100 rounded-lg p-1">
+                        <button onclick="changeLanguage('fr')" data-lang="fr" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-bus-orange text-white transition-colors">FR</button>
+                        <button onclick="changeLanguage('en')" data-lang="en" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">EN</button>
+                        <button onclick="changeLanguage('es')" data-lang="es" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">ES</button>
+                        <button onclick="changeLanguage('pt')" data-lang="pt" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">PT</button>
+                        <button onclick="changeLanguage('it')" data-lang="it" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">IT</button>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#services" class="text-gray-700 hover:text-bus-orange transition-colors" data-translate="nav_services">Services</a>
+                    <a href="#partenaires" class="text-gray-700 hover:text-bus-orange transition-colors" data-translate="nav_partners">Partenaires</a>
+                    <a href="#prestataires" class="text-gray-700 hover:text-bus-orange transition-colors" data-translate="nav_providers">Prestataires</a>
+                    <a href="#contact" class="text-gray-700 hover:text-bus-orange transition-colors" data-translate="nav_contact">Contact</a>
+                </div>
+                <button class="bg-bus-orange hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition-colors" data-translate="nav_demo">
+                    Démo gratuite
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Hero avec image d'autocar -->
+    <section class="bg-white min-h-screen flex items-center relative overflow-hidden pt-20">
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Contenu texte à gauche -->
+                <div class="max-w-2xl">
+                    <h1 class="text-5xl lg:text-6xl font-bold text-bus-dark mb-6 fade-in">
+                        <span class="text-bus-orange" data-translate="hero_title">Buses Solutions</span>
+                    </h1>
+                    
+                    <h2 class="text-2xl lg:text-3xl font-semibold text-gray-700 mb-8 fade-in" style="animation-delay: 0.2s;" data-translate="hero_subtitle">
+                        Assistance professionnelle aux autocars en Europe
+                    </h2>
+                    
+                    <p class="text-xl text-gray-600 mb-8 fade-in" style="animation-delay: 0.4s;" data-translate="hero_description">
+                        Votre partenaire de confiance pour l'assistance routière en Europe.
+                    </p>
+                    
+                    <p class="text-xl text-bus-orange font-semibold mb-12 fade-in" style="animation-delay: 0.6s;" data-translate="hero_problem">
+                        Un problème ? Nous sommes votre solution !
+                    </p>
+                    
+                    <!-- Avantages avec icônes -->
+                    <div class="grid grid-cols-2 gap-6 mb-12">
+                        <div class="flex items-center fade-in" style="animation-delay: 0.8s;">
+                            <div class="bg-bus-orange rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                    <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800" data-translate="feature_24h">Assistance 24h/24</h3>
+                                <p class="text-sm text-gray-600" data-translate="feature_24h_desc">7j/7</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center fade-in" style="animation-delay: 1s;">
+                            <div class="bg-bus-orange rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800" data-translate="feature_network">Réseau certifié</h3>
+                                <p class="text-sm text-gray-600" data-translate="feature_network_desc">Dépanneurs et garages</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center fade-in" style="animation-delay: 1.2s;">
+                            <div class="bg-bus-orange rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800" data-translate="feature_coverage">Couverture Europe</h3>
+                                <p class="text-sm text-gray-600" data-translate="feature_coverage_desc">Juridique, traduction, suivi</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center fade-in" style="animation-delay: 1.4s;">
+                            <div class="bg-bus-orange rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                    <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800" data-translate="feature_time">Gain de temps</h3>
+                                <p class="text-sm text-gray-600" data-translate="feature_time_desc">Prise en charge complète</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="fade-in" style="animation-delay: 1.6s;">
+                        <button class="bg-bus-orange hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg pulse-orange" data-translate="hero_cta">
+                            Demander une démo gratuite
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Image d'autocar à droite -->
+                <div class="flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <img src="https://i.ibb.co/mFFZcQNj/Whats-App-Image-. -e0e3c5e9.jpg" 
+                             alt="Autocar Buses Solutions" 
+                             class="w-full max-w-lg h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
+                             onerror="this.style.display='none'; console.log('Image failed to load');">
+                        
+                        <!-- Éléments décoratifs autour de l'image -->
+                        <div class="absolute -top-4 -right-4 w-8 h-8 bg-bus-orange rounded-full opacity-80 animate-pulse"></div>
+                        <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-blue-500 rounded-full opacity-60 animate-pulse" style="animation-delay: 0.5s;"></div>
+                        <div class="absolute top-1/2 -left-8 w-4 h-4 bg-green-500 rounded-full opacity-70 animate-pulse" style="animation-delay: 1s;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services pour les Autocaristes -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-bus-dark mb-4" data-translate="services_title">
+                    Services pour les Autocaristes
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="services_subtitle">
+                    Une assistance complète à portée de main
+                </p>
+                <div class="w-24 h-1 bg-bus-orange mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center mb-6">
+                        <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-bus-dark mb-3">
+                            Assistance technique & juridique
+                        </h3>
+                    </div>
+                    <p class="text-gray-600 text-center leading-relaxed mb-6">
+                        Support expert <span class="font-semibold text-bus-orange">24/7</span> pour litiges et réglementations
+                    </p>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                Conseil juridique spécialisé
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                Gestion des litiges
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                Conformité réglementaire
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center mb-6">
+                        <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-bus-dark mb-3">
+                            Réseau fiable de prestataires
+                        </h3>
+                    </div>
+                    <p class="text-gray-600 text-center leading-relaxed mb-6">
+                        Mise en relation avec des <span class="font-semibold text-bus-orange">partenaires certifiés</span>
+                    </p>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                Dépanneurs agréés
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                Garages spécialisés
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                Contrôle qualité permanent
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center mb-6">
+                        <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C15.4,11.5 16,12.4 16,13V16C16,17.4 15.4,18 14.8,18H9.2C8.6,18 8,17.4 8,16V13C8,12.4 8.6,11.5 9.2,11.5V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,10V11.5H13.5V10C13.5,8.7 12.8,8.2 12,8.2Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-bus-dark mb-3">
+                            Gain de temps & sécurité
+                        </h3>
+                    </div>
+                    <p class="text-gray-600 text-center leading-relaxed mb-6">
+                        Réduction des immobilisations + <span class="font-semibold text-bus-orange">cars de substitution</span>
+                    </p>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                Intervention rapide
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                Véhicules de remplacement
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                Sécurité des passagers
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Nos Partenaires Principaux -->
+    <section id="partenaires" class="py-20 bg-white">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-bus-dark mb-4">
+                    Nos Partenaires <span class="text-bus-orange">Principaux</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
+                    Un écosystème complet pour votre assistance routière
+                </p>
+                <div class="w-24 h-1 bg-bus-orange mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-bus-orange hover:text-white transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-bus-orange group-hover:bg-white rounded-full flex items-center justify-center mx-auto mb-4 transition-colors">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="white" class="group-hover:fill-bus-orange">
+                            <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Autocaristes</h3>
+                    <p class="text-sm opacity-80">France & Europe</p>
+                </div>
+
+                <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-bus-orange hover:text-white transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-bus-orange group-hover:bg-white rounded-full flex items-center justify-center mx-auto mb-4 transition-colors">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="white" class="group-hover:fill-bus-orange">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Services juridiques</h3>
+                    <p class="text-sm opacity-80">Gestion litiges</p>
+                </div>
+
+                <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-bus-orange hover:text-white transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-bus-orange group-hover:bg-white rounded-full flex items-center justify-center mx-auto mb-4 transition-colors">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="white" class="group-hover:fill-bus-orange">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Référents techniques</h3>
+                    <p class="text-sm opacity-80">Diagnostic & expertise</p>
+                </div>
+
+                <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-bus-orange hover:text-white transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-bus-orange group-hover:bg-white rounded-full flex items-center justify-center mx-auto mb-4 transition-colors">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="white" class="group-hover:fill-bus-orange">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Suivi international</h3>
+                    <p class="text-sm opacity-80">Coordination Europe</p>
+                </div>
+            </div>
+
+            <!-- Carte européenne -->
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg">
+                <h3 class="text-2xl font-bold text-center text-bus-dark mb-8">Notre couverture européenne</h3>
+                
+                <div class="flex justify-center mb-8">
+                    <svg width="500" height="400" viewBox="0 0 500 400" class="max-w-full">
+                        <rect width="500" height="400" fill="#f8fafc" rx="10"/>
+                        
+                        <!-- France -->
+                        <path d="M150 200 L180 180 L200 200 L190 240 L160 250 L140 230 Z" fill="#FF6B35" opacity="0.8">
+                            <title>France</title>
+                        </path>
+                        <text x="170" y="220" font-size="12" fill="white" font-weight="bold" text-anchor="middle">FR</text>
+                        
+                        <!-- Espagne -->
+                        <path d="M120 250 L160 250 L170 280 L140 290 L110 280 Z" fill="#FF6B35" opacity="0.8">
+                            <title>Espagne</title>
+                        </path>
+                        <text x="140" y="275" font-size="12" fill="white" font-weight="bold" text-anchor="middle">ES</text>
+                        
+                        <!-- Portugal -->
+                        <path d="M100 260 L120 250 L110 280 L90 285 Z" fill="#FF6B35" opacity="0.8">
+                            <title>Portugal</title>
+                        </path>
+                        <text x="105" y="275" font-size="12" fill="white" font-weight="bold" text-anchor="middle">PT</text>
+                        
+                        <!-- Italie -->
+                        <path d="M220 220 L240 210 L250 250 L240 290 L220 280 L210 240 Z" fill="#FF6B35" opacity="0.8">
+                            <title>Italie</title>
+                        </path>
+                        <text x="230" y="255" font-size="12" fill="white" font-weight="bold" text-anchor="middle">IT</text>
+                        
+                        <!-- Belgique -->
+                        <path d="M170 170 L190 165 L195 180 L180 185 Z" fill="#FF6B35" opacity="0.8">
+                            <title>Belgique</title>
+                        </path>
+                        <text x="182" y="178" font-size="12" fill="white" font-weight="bold" text-anchor="middle">BE</text>
+                        
+                        <!-- Grande-Bretagne -->
+                        <path d="M100 150 L130 140 L140 170 L120 180 L90 170 Z" fill="#FF6B35" opacity="0.8">
+                            <title>Grande-Bretagne</title>
+                        </path>
+                        <text x="115" y="165" font-size="12" fill="white" font-weight="bold" text-anchor="middle">GB</text>
+                    </svg>
+                </div>
+                
+                <div class="flex flex-wrap justify-center items-center gap-6">
+                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow">
+                        <div class="w-4 h-4 bg-bus-orange rounded-full mr-2"></div>
+                        <span class="font-semibold">France</span>
+                    </div>
+                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow">
+                        <div class="w-4 h-4 bg-bus-orange rounded-full mr-2"></div>
+                        <span class="font-semibold">Belgique</span>
+                    </div>
+                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow">
+                        <div class="w-4 h-4 bg-bus-orange rounded-full mr-2"></div>
+                        <span class="font-semibold">Espagne</span>
+                    </div>
+                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow">
+                        <div class="w-4 h-4 bg-bus-orange rounded-full mr-2"></div>
+                        <span class="font-semibold">Portugal</span>
+                    </div>
+                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow">
+                        <div class="w-4 h-4 bg-bus-orange rounded-full mr-2"></div>
+                        <span class="font-semibold">Italie</span>
+                    </div>
+                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow">
+                        <div class="w-4 h-4 bg-bus-orange rounded-full mr-2"></div>
+                        <span class="font-semibold">Grande-Bretagne</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Pour les Prestataires -->
+    <section id="prestataires" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-bus-dark mb-4">
+                    Pour les <span class="text-bus-orange">Prestataires</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Développez votre activité avec notre plateforme
+                </p>
+                <div class="w-24 h-1 bg-bus-orange mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+                    <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 5.5 15.5 8zM12 19c-3.87 0-7-3.13-7-7 0-.84.16-1.65.43-2.4L12 13l6.57-3.4c.27.75.43 1.56.43 2.4 0 3.87-3.13 7-7 7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-bus-dark mb-4">Visibilité accrue</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Augmentez votre visibilité auprès des autocaristes européens
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+                    <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-bus-dark mb-4">Missions internationales</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Accédez à des missions internationales pour développer votre activité
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+                    <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-bus-dark mb-4">Suivi facilité</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Suivi administratif & paiements sécurisés sous 48h
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Formulaire de Contact -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-bus-dark mb-4" data-translate="contact_title">
+                        Demander une démo
+                    </h2>
+                    <p class="text-xl text-gray-600" data-translate="contact_subtitle">
+                        Nous pouvons également venir vous présenter Buses Solutions directement.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 lg:p-12 shadow-xl">
+                    <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <span data-translate="form_name">Nom</span> *
+                            </label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="Votre nom complet">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <span data-translate="form_email">Email</span> *
+                            </label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="votre@email.com">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <span data-translate="form_phone">Téléphone</span> *
+                            </label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="+33 1 23 45 67 89">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <span data-translate="form_vehicles">Nombre de véhicules</span>
+                            </label>
+                            <input type="number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" placeholder="Ex: 15">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <span data-translate="form_location">Lieu du dépôt</span>
+                            </label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" placeholder="Ville, Région">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <span data-translate="form_emergency">Numéro d'urgence</span>
+                            </label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" placeholder="Numéro 24h/24">
+                        </div>
+                        
+                        <div class="md:col-span-2">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-5 h-5 text-bus-orange border-gray-300 rounded focus:ring-bus-orange">
+                                <span class="ml-3 text-sm text-gray-700" data-translate="form_contact_me">
+                                    Je souhaite être recontacté par un expert Buses Solutions
+                                </span>
+                            </label>
+                        </div>
+                        
+                        <div class="md:col-span-2 text-center">
+                            <button type="submit" class="bg-bus-orange hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg" data-translate="form_submit">
+                                Demander une démo maintenant
+                            </button>
+                            <p class="text-sm text-gray-500 mt-4">
+                                ⚡ Réponse sous 2h en moyenne • 🔒 Données sécurisées
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-bus-dark text-white py-16">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <span class="text-3xl font-bold text-white">Buses</span>
+                        <span class="text-3xl font-bold text-bus-orange">Solutions</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Votre partenaire de confiance pour l'assistance routière aux autocars en Europe.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p>📧 contact@buses-solutions.fr</p>
+                        <p>📞 +33 1 23 45 67 89</p>
+                        <p>📍 123 Avenue de l'Europe<br>75001 Paris, France</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liens utiles</h4>
+                    <div class="space-y-2">
+                        <a href="#" class="block text-gray-300 hover:text-bus-orange transition-colors">Mentions légales</a>
+                        <a href="#" class="block text-gray-300 hover:text-bus-orange transition-colors">Politique de confidentialité</a>
+                        <a href="#" class="block text-gray-300 hover:text-bus-orange transition-colors">CGU</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Buses Solutions. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre demande ! Nous vous recontacterons rapidement.');
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97d56787734dc8fe',t:'MTc1NzU3NTI0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
