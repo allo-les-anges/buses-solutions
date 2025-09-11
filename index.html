@@ -270,15 +270,31 @@
 <body class="bg-white">
     <!-- Navigation -->
     <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
-        <div class="container mx-auto px-6 lg:px-8 relative z-10">
-            <div class="flex justify-between items-center py-4">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex justify-between items-center py-3 sm:py-4">
                 <div class="flex items-center">
-                    <span class="text-2xl font-bold text-bus-dark">Buses</span>
-                    <span class="text-2xl font-bold text-bus-orange">Solutions</span>
+                    <span class="text-xl sm:text-2xl font-bold text-bus-dark">Buses</span>
+                    <span class="text-xl sm:text-2xl font-bold text-bus-orange">Solutions</span>
                 </div>
                 
-                <!-- Sélecteur de langue -->
+                <!-- Menu mobile button -->
+                <div class="md:hidden flex items-center space-x-2">
+                    <!-- Sélecteur de langue mobile -->
+                    <div class="flex space-x-1 bg-gray-100 rounded-lg p-1">
+                        <button onclick="changeLanguage('fr')" data-lang="fr" class="lang-btn px-2 py-1 rounded-md text-xs font-medium bg-bus-orange text-white transition-colors">FR</button>
+                        <button onclick="changeLanguage('en')" data-lang="en" class="lang-btn px-2 py-1 rounded-md text-xs font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">EN</button>
+                        <button onclick="changeLanguage('es')" data-lang="es" class="lang-btn px-2 py-1 rounded-md text-xs font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">ES</button>
+                    </div>
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-bus-orange focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Desktop menu -->
                 <div class="hidden md:flex items-center space-x-4">
+                    <!-- Sélecteur de langue desktop -->
                     <div class="flex space-x-1 bg-gray-100 rounded-lg p-1">
                         <button onclick="changeLanguage('fr')" data-lang="fr" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-bus-orange text-white transition-colors">FR</button>
                         <button onclick="changeLanguage('en')" data-lang="en" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">EN</button>
@@ -286,123 +302,132 @@
                         <button onclick="changeLanguage('pt')" data-lang="pt" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">PT</button>
                         <button onclick="changeLanguage('it')" data-lang="it" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">IT</button>
                     </div>
+                    
+                    <div class="flex space-x-6 lg:space-x-8">
+                        <a href="#services" class="text-gray-700 hover:text-bus-orange transition-colors" data-translate="nav_services">Services</a>
+                        <a href="#partenaires" class="text-gray-700 hover:text-bus-orange transition-colors" data-translate="nav_partners">Partenaires</a>
+                        <a href="#prestataires" class="text-gray-700 hover:text-bus-orange transition-colors" data-translate="nav_providers">Prestataires</a>
+                        <a href="#contact" class="text-gray-700 hover:text-bus-orange transition-colors" data-translate="nav_contact">Contact</a>
+                    </div>
                 </div>
                 
-                <div class="hidden md:flex space-x-8">
-                    <a href="#services" class="text-gray-700 hover:text-bus-orange transition-colors" data-translate="nav_services">Services</a>
-                    <a href="#partenaires" class="text-gray-700 hover:text-bus-orange transition-colors" data-translate="nav_partners">Partenaires</a>
-                    <a href="#prestataires" class="text-gray-700 hover:text-bus-orange transition-colors" data-translate="nav_providers">Prestataires</a>
-                    <a href="#contact" class="text-gray-700 hover:text-bus-orange transition-colors" data-translate="nav_contact">Contact</a>
-                </div>
-                <button class="bg-bus-orange hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition-colors" data-translate="nav_demo">
+                <a href="#contact" class="bg-bus-orange hover:bg-orange-600 text-white px-3 sm:px-6 py-2 rounded-lg transition-colors text-sm sm:text-base" data-translate="nav_demo">
                     Démo gratuite
-                </button>
+                </a>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200 py-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#services" class="text-gray-700 hover:text-bus-orange transition-colors px-4 py-2" data-translate="nav_services">Services</a>
+                    <a href="#partenaires" class="text-gray-700 hover:text-bus-orange transition-colors px-4 py-2" data-translate="nav_partners">Partenaires</a>
+                    <a href="#prestataires" class="text-gray-700 hover:text-bus-orange transition-colors px-4 py-2" data-translate="nav_providers">Prestataires</a>
+                    <a href="#contact" class="text-gray-700 hover:text-bus-orange transition-colors px-4 py-2" data-translate="nav_contact">Contact</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Section Hero avec image d'autocar -->
-    <section class="min-h-screen flex items-center relative overflow-hidden pt-20" style="background-image: url('https://i.ibb.co/99mkSMwg/HERO2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <section class="min-h-screen flex items-center relative overflow-hidden pt-16 sm:pt-20" style="background-image: url('https://i.ibb.co/9HVrXw2z/1.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div class="container mx-auto px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <!-- Contenu texte à gauche -->
-                <div class="max-w-2xl">
-                    <h1 class="text-5xl lg:text-6xl font-bold text-white mb-6 fade-in">
+                <div class="max-w-2xl text-center lg:text-left">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 fade-in">
                         <span class="text-bus-orange" data-translate="hero_title">Buses Solutions</span>
                     </h1>
                     
-                    <h2 class="text-2xl lg:text-3xl font-semibold text-white mb-8 fade-in" style="animation-delay: 0.2s;" data-translate="hero_subtitle">
+                    <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-6 sm:mb-8 fade-in" style="animation-delay: 0.2s;" data-translate="hero_subtitle">
                         Assistance professionnelle aux autocars en Europe
                     </h2>
                     
-                    <p class="text-xl text-gray-200 mb-8 fade-in" style="animation-delay: 0.4s;" data-translate="hero_description">
+                    <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-8 fade-in" style="animation-delay: 0.4s;" data-translate="hero_description">
                         Votre partenaire de confiance pour l'assistance routière en Europe.
                     </p>
                     
-                    <p class="text-xl text-bus-orange font-semibold mb-12 fade-in" style="animation-delay: 0.6s;" data-translate="hero_problem">
+                    <p class="text-base sm:text-lg md:text-xl text-bus-orange font-semibold mb-8 sm:mb-12 fade-in" style="animation-delay: 0.6s;" data-translate="hero_problem">
                         Un problème ? Nous sommes votre solution !
                     </p>
                     
                     <!-- Avantages avec icônes -->
-                    <div class="grid grid-cols-2 gap-6 mb-12">
-                        <div class="flex items-center fade-in" style="animation-delay: 0.8s;">
-                            <div class="bg-bus-orange rounded-full w-12 h-12 flex items-center justify-center mr-4">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
+                        <div class="flex items-center justify-center lg:justify-start fade-in" style="animation-delay: 0.8s;">
+                            <div class="bg-bus-orange rounded-full w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                                <svg width="20" height="20" class="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="white">
                                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
                                     <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-white" data-translate="feature_24h">Assistance 24h/24</h3>
-                                <p class="text-sm text-gray-200" data-translate="feature_24h_desc">7j/7</p>
+                                <h3 class="font-semibold text-white text-sm sm:text-base" data-translate="feature_24h">Assistance 24h/24</h3>
+                                <p class="text-xs sm:text-sm text-gray-200" data-translate="feature_24h_desc">7j/7</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-center fade-in" style="animation-delay: 1s;">
-                            <div class="bg-bus-orange rounded-full w-12 h-12 flex items-center justify-center mr-4">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <div class="flex items-center justify-center lg:justify-start fade-in" style="animation-delay: 1s;">
+                            <div class="bg-bus-orange rounded-full w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                                <svg width="20" height="20" class="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="white">
                                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-white" data-translate="feature_network">Réseau certifié</h3>
-                                <p class="text-sm text-gray-200" data-translate="feature_network_desc">Dépanneurs et garages</p>
+                                <h3 class="font-semibold text-white text-sm sm:text-base" data-translate="feature_network">Réseau certifié</h3>
+                                <p class="text-xs sm:text-sm text-gray-200" data-translate="feature_network_desc">Dépanneurs et garages</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-center fade-in" style="animation-delay: 1.2s;">
-                            <div class="bg-bus-orange rounded-full w-12 h-12 flex items-center justify-center mr-4">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <div class="flex items-center justify-center lg:justify-start fade-in" style="animation-delay: 1.2s;">
+                            <div class="bg-bus-orange rounded-full w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                                <svg width="20" height="20" class="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="white">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-white" data-translate="feature_coverage">Couverture Europe</h3>
-                                <p class="text-sm text-gray-200" data-translate="feature_coverage_desc">Juridique, traduction, suivi</p>
+                                <h3 class="font-semibold text-white text-sm sm:text-base" data-translate="feature_coverage">Couverture Europe</h3>
+                                <p class="text-xs sm:text-sm text-gray-200" data-translate="feature_coverage_desc">Juridique, traduction, suivi</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-center fade-in" style="animation-delay: 1.4s;">
-                            <div class="bg-bus-orange rounded-full w-12 h-12 flex items-center justify-center mr-4">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <div class="flex items-center justify-center lg:justify-start fade-in" style="animation-delay: 1.4s;">
+                            <div class="bg-bus-orange rounded-full w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                                <svg width="20" height="20" class="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="white">
                                     <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-white" data-translate="feature_time">Gain de temps</h3>
-                                <p class="text-sm text-gray-200" data-translate="feature_time_desc">Prise en charge complète</p>
+                                <h3 class="font-semibold text-white text-sm sm:text-base" data-translate="feature_time">Gain de temps</h3>
+                                <p class="text-xs sm:text-sm text-gray-200" data-translate="feature_time_desc">Prise en charge complète</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="fade-in" style="animation-delay: 1.6s;">
-                        <button class="bg-bus-orange hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg pulse-orange" data-translate="hero_cta">
+                        <a href="#contact" class="inline-block bg-bus-orange hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg pulse-orange" data-translate="hero_cta">
                             Demander une démo gratuite
-                        </button>
+                        </a>
                     </div>
                 </div>
-                
-
             </div>
         </div>
     </section>
 
     <!-- Section Services pour les Autocaristes -->
-    <section id="services" class="py-20 relative" style="background-image: url('https://i.ibb.co/xSsdQKxG/2-Services-pour-les-Autocaristes.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <section id="services" class="py-12 sm:py-16 lg:py-20 relative" style="background-image: url('https://i.ibb.co/xSsdQKxG/2-Services-pour-les-Autocaristes.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="absolute inset-0 bg-white bg-opacity-90"></div>
-        <div class="container mx-auto px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl lg:text-5xl font-bold text-bus-dark mb-4" data-translate="services_title">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-bus-dark mb-4" data-translate="services_title">
                     Services pour les Autocaristes
                 </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="services_subtitle">
+                <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto" data-translate="services_subtitle">
                     Une assistance complète à portée de main
                 </p>
-                <div class="w-24 h-1 bg-bus-orange mx-auto mt-6"></div>
+                <div class="w-16 sm:w-24 h-1 bg-bus-orange mx-auto mt-4 sm:mt-6"></div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
                 <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                     <div class="text-center mb-6">
                         <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
@@ -503,20 +528,20 @@
     </section>
 
     <!-- Section Nos Partenaires Principaux -->
-    <section id="partenaires" class="py-20 relative" style="background-image: url('https://i.ibb.co/TB8rwZtK/3-Nos-Partenaires-Principaux.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <section id="partenaires" class="py-12 sm:py-16 lg:py-20 relative" style="background-image: url('https://i.ibb.co/TB8rwZtK/3-Nos-Partenaires-Principaux.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="absolute inset-0 bg-white bg-opacity-90"></div>
-        <div class="container mx-auto px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl lg:text-5xl font-bold text-bus-dark mb-4">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-bus-dark mb-4">
                     Nos Partenaires <span class="text-bus-orange">Principaux</span>
                 </h2>
-                <p class="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
+                <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto mb-6 sm:mb-8">
                     Un écosystème complet pour votre assistance routière
                 </p>
-                <div class="w-24 h-1 bg-bus-orange mx-auto"></div>
+                <div class="w-16 sm:w-24 h-1 bg-bus-orange mx-auto"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-16">
                 <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-bus-orange hover:text-white transition-all duration-300 group">
                     <div class="w-16 h-16 bg-bus-orange group-hover:bg-white rounded-full flex items-center justify-center mx-auto mb-4 transition-colors">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="white" class="group-hover:fill-bus-orange">
@@ -593,20 +618,20 @@
     </section>
 
     <!-- Section Pour les Prestataires -->
-    <section id="prestataires" class="py-20 relative" style="background-image: url('https://i.ibb.co/MkrVjmjd/4-Pour-les-Prestataires.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <section id="prestataires" class="py-12 sm:py-16 lg:py-20 relative" style="background-image: url('https://i.ibb.co/MkrVjmjd/4-Pour-les-Prestataires.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="absolute inset-0 bg-gray-50 bg-opacity-90"></div>
-        <div class="container mx-auto px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl lg:text-5xl font-bold text-bus-dark mb-4">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-bus-dark mb-4">
                     Pour les <span class="text-bus-orange">Prestataires</span>
                 </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
                     Développez votre activité avec notre plateforme
                 </p>
-                <div class="w-24 h-1 bg-bus-orange mx-auto mt-6"></div>
+                <div class="w-16 sm:w-24 h-1 bg-bus-orange mx-auto mt-4 sm:mt-6"></div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
                 <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
                     <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
@@ -647,20 +672,20 @@
     </section>
 
     <!-- Section Formulaire de Contact -->
-    <section id="contact" class="py-20 relative" style="background-image: url('https://i.ibb.co/fddjWZnD/5-Formulaire-de-Contact-Footer.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <section id="contact" class="py-12 sm:py-16 lg:py-20 relative" style="background-image: url('https://i.ibb.co/fddjWZnD/5-Formulaire-de-Contact-Footer.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="absolute inset-0 bg-white bg-opacity-90"></div>
-        <div class="container mx-auto px-6 lg:px-8 relative z-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl lg:text-5xl font-bold text-bus-dark mb-4" data-translate="contact_title">
+                <div class="text-center mb-8 sm:mb-12">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-bus-dark mb-4" data-translate="contact_title">
                         Demander une démo
                     </h2>
-                    <p class="text-xl text-gray-600" data-translate="contact_subtitle">
+                    <p class="text-base sm:text-lg md:text-xl text-gray-600" data-translate="contact_subtitle">
                         Nous pouvons également venir vous présenter Buses Solutions directement.
                     </p>
                 </div>
 
-                <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 lg:p-12 shadow-xl">
+                <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 sm:p-8 lg:p-12 shadow-xl">
                     <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">
@@ -728,22 +753,22 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-bus-dark text-white py-16">
-        <div class="container mx-auto px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="md:col-span-2">
-                    <div class="flex items-center mb-6">
-                        <span class="text-3xl font-bold text-white">Buses</span>
-                        <span class="text-3xl font-bold text-bus-orange">Solutions</span>
+    <footer class="bg-bus-dark text-white py-12 sm:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                <div class="sm:col-span-2 lg:col-span-2">
+                    <div class="flex items-center mb-4 sm:mb-6">
+                        <span class="text-2xl sm:text-3xl font-bold text-white">Buses</span>
+                        <span class="text-2xl sm:text-3xl font-bold text-bus-orange">Solutions</span>
                     </div>
-                    <p class="text-gray-300 mb-6 max-w-md">
+                    <p class="text-gray-300 mb-4 sm:mb-6 max-w-md text-sm sm:text-base">
                         Votre partenaire de confiance pour l'assistance routière aux autocars en Europe.
                     </p>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
-                    <div class="space-y-2 text-gray-300">
+                    <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Contact</h4>
+                    <div class="space-y-2 text-gray-300 text-sm sm:text-base">
                         <p>📧 contact@buses-solutions.fr</p>
                         <p>📞 +33 1 23 45 67 89</p>
                         <p>📍 123 Avenue de l'Europe<br>75001 Paris, France</p>
@@ -751,8 +776,8 @@
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Liens utiles</h4>
-                    <div class="space-y-2">
+                    <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Liens utiles</h4>
+                    <div class="space-y-2 text-sm sm:text-base">
                         <a href="#" class="block text-gray-300 hover:text-bus-orange transition-colors">Mentions légales</a>
                         <a href="#" class="block text-gray-300 hover:text-bus-orange transition-colors">Politique de confidentialité</a>
                         <a href="#" class="block text-gray-300 hover:text-bus-orange transition-colors">CGU</a>
@@ -760,7 +785,7 @@
                 </div>
             </div>
             
-            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+            <div class="border-t border-gray-700 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center text-gray-400 text-sm sm:text-base">
                 <p>&copy; 2024 Buses Solutions. Tous droits réservés.</p>
             </div>
         </div>
@@ -781,11 +806,24 @@
             });
         });
 
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
         // Form submission
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Merci pour votre demande ! Nous vous recontacterons rapidement.');
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97d5b05bb6adec8b',t:'MTc1NzU3ODIyOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97d5c4d4765aec8b',t:'MTc1NzU3OTA2Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
