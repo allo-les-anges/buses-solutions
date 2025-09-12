@@ -13,6 +13,9 @@
                         'bus-orange': '#FF6B35',
                         'bus-dark': '#1A1A1A',
                         'bus-gray': '#2D2D2D'
+                    },
+                    screens: {
+                        'xs': '475px',
                     }
                 }
             }
@@ -636,80 +639,80 @@
     <!-- Section Hero avec image d'autocar -->
     <section class="min-h-screen flex items-center relative overflow-hidden pt-16 sm:pt-20" style="background-image: url('https://i.ibb.co/fd4MHcmm/HERO3.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div class="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
                 <!-- Contenu texte à gauche -->
                 <div class="max-w-2xl text-center lg:text-left">
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 fade-in">
+                    <h1 class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6 fade-in leading-tight">
                         <span class="text-bus-orange" data-translate="hero_title">Buses Solutions</span>
                     </h1>
                     
-                    <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-6 sm:mb-8 fade-in" style="animation-delay: 0.2s;" data-translate="hero_subtitle">
+                    <h2 class="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold text-white mb-4 sm:mb-6 md:mb-8 fade-in leading-tight" style="animation-delay: 0.2s;" data-translate="hero_subtitle">
                         Assistance professionnelle aux autocars en Europe
                     </h2>
                     
-                    <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-8 fade-in" style="animation-delay: 0.4s;" data-translate="hero_description">
+                    <p class="text-sm xs:text-base sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6 md:mb-8 fade-in leading-relaxed" style="animation-delay: 0.4s;" data-translate="hero_description">
                         Votre partenaire de confiance pour l'assistance routière en Europe.
                     </p>
                     
-                    <p class="text-base sm:text-lg md:text-xl text-bus-orange font-semibold mb-8 sm:mb-12 fade-in" style="animation-delay: 0.6s;" data-translate="hero_problem">
+                    <p class="text-sm xs:text-base sm:text-lg md:text-xl text-bus-orange font-semibold mb-6 sm:mb-8 md:mb-12 fade-in" style="animation-delay: 0.6s;" data-translate="hero_problem">
                         Un problème ? Nous sommes votre solution !
                     </p>
                     
                     <!-- Avantages avec icônes -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
-                        <div class="flex items-start justify-start lg:justify-start fade-in" style="animation-delay: 0.8s;">
-                            <div class="bg-bus-orange rounded-full w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1">
-                                <svg width="20" height="20" class="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="white">
+                    <div class="grid grid-cols-1 xs:grid-cols-2 gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8 md:mb-12">
+                        <div class="flex items-start justify-start fade-in" style="animation-delay: 0.8s;">
+                            <div class="bg-bus-orange rounded-full w-8 xs:w-10 sm:w-12 h-8 xs:h-10 sm:h-12 flex items-center justify-center mr-2 xs:mr-3 sm:mr-4 flex-shrink-0 mt-1">
+                                <svg width="16" height="16" class="xs:w-5 xs:h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="white">
                                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
                                     <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
                                 </svg>
                             </div>
                             <div class="flex-1 text-left">
-                                <h3 class="font-semibold text-white text-sm sm:text-base leading-tight" data-translate="feature_24h">Assistance 24h/24</h3>
+                                <h3 class="font-semibold text-white text-xs xs:text-sm sm:text-base leading-tight" data-translate="feature_24h">Assistance 24h/24</h3>
                                 <p class="text-xs sm:text-sm text-gray-200 mt-1" data-translate="feature_24h_desc">7j/7</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-start justify-start lg:justify-start fade-in" style="animation-delay: 1s;">
-                            <div class="bg-bus-orange rounded-full w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1">
-                                <svg width="20" height="20" class="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="white">
+                        <div class="flex items-start justify-start fade-in" style="animation-delay: 1s;">
+                            <div class="bg-bus-orange rounded-full w-8 xs:w-10 sm:w-12 h-8 xs:h-10 sm:h-12 flex items-center justify-center mr-2 xs:mr-3 sm:mr-4 flex-shrink-0 mt-1">
+                                <svg width="16" height="16" class="xs:w-5 xs:h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="white">
                                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                                 </svg>
                             </div>
                             <div class="flex-1 text-left">
-                                <h3 class="font-semibold text-white text-sm sm:text-base leading-tight" data-translate="feature_network">Réseau certifié</h3>
+                                <h3 class="font-semibold text-white text-xs xs:text-sm sm:text-base leading-tight" data-translate="feature_network">Réseau certifié</h3>
                                 <p class="text-xs sm:text-sm text-gray-200 mt-1" data-translate="feature_network_desc">Dépanneurs et garages</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-start justify-start lg:justify-start fade-in" style="animation-delay: 1.2s;">
-                            <div class="bg-bus-orange rounded-full w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1">
-                                <svg width="20" height="20" class="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="white">
+                        <div class="flex items-start justify-start fade-in" style="animation-delay: 1.2s;">
+                            <div class="bg-bus-orange rounded-full w-8 xs:w-10 sm:w-12 h-8 xs:h-10 sm:h-12 flex items-center justify-center mr-2 xs:mr-3 sm:mr-4 flex-shrink-0 mt-1">
+                                <svg width="16" height="16" class="xs:w-5 xs:h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="white">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                                 </svg>
                             </div>
                             <div class="flex-1 text-left">
-                                <h3 class="font-semibold text-white text-sm sm:text-base leading-tight" data-translate="feature_coverage">Couverture Europe</h3>
+                                <h3 class="font-semibold text-white text-xs xs:text-sm sm:text-base leading-tight" data-translate="feature_coverage">Couverture Europe</h3>
                                 <p class="text-xs sm:text-sm text-gray-200 mt-1" data-translate="feature_coverage_desc">Juridique, traduction, suivi</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-start justify-start lg:justify-start fade-in" style="animation-delay: 1.4s;">
-                            <div class="bg-bus-orange rounded-full w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1">
-                                <svg width="20" height="20" class="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="white">
+                        <div class="flex items-start justify-start fade-in" style="animation-delay: 1.4s;">
+                            <div class="bg-bus-orange rounded-full w-8 xs:w-10 sm:w-12 h-8 xs:h-10 sm:h-12 flex items-center justify-center mr-2 xs:mr-3 sm:mr-4 flex-shrink-0 mt-1">
+                                <svg width="16" height="16" class="xs:w-5 xs:h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="white">
                                     <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
                                 </svg>
                             </div>
                             <div class="flex-1 text-left">
-                                <h3 class="font-semibold text-white text-sm sm:text-base leading-tight" data-translate="feature_time">Gain de temps</h3>
+                                <h3 class="font-semibold text-white text-xs xs:text-sm sm:text-base leading-tight" data-translate="feature_time">Gain de temps</h3>
                                 <p class="text-xs sm:text-sm text-gray-200 mt-1" data-translate="feature_time_desc">Prise en charge complète</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="fade-in" style="animation-delay: 1.6s;">
-                        <a href="#contact" class="inline-block bg-bus-orange hover:bg-orange-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg pulse-orange" data-translate="hero_cta">
+                        <a href="#contact" class="inline-block bg-bus-orange hover:bg-orange-600 text-white font-bold py-2 xs:py-3 sm:py-4 px-4 xs:px-6 sm:px-8 rounded-lg text-sm xs:text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg pulse-orange" data-translate="hero_cta">
                             Demander une démo gratuite
                         </a>
                     </div>
@@ -719,112 +722,112 @@
     </section>
 
     <!-- Section Services pour les Autocaristes -->
-    <section id="services" class="py-12 sm:py-16 lg:py-20 relative" style="background-image: url('https://i.ibb.co/xSsdQKxG/2-Services-pour-les-Autocaristes.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <section id="services" class="py-8 sm:py-12 md:py-16 lg:py-20 relative" style="background-image: url('https://i.ibb.co/xSsdQKxG/2-Services-pour-les-Autocaristes.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="absolute inset-0 bg-white bg-opacity-30"></div>
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-12 sm:mb-16">
-                <div class="bg-white bg-opacity-90 rounded-2xl p-6 sm:p-8 shadow-lg inline-block">
-                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-bus-dark mb-4" data-translate="services_title">
+        <div class="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-8 sm:mb-12 md:mb-16">
+                <div class="bg-white bg-opacity-90 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg inline-block max-w-full">
+                    <h2 class="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-bus-dark mb-2 sm:mb-4 leading-tight" data-translate="services_title">
                         Services dédié aux autocaristes
                     </h2>
-                    <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto" data-translate="services_subtitle">
+                    <p class="text-sm xs:text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed" data-translate="services_subtitle">
                         un accompagnement complet à portée de main
                     </p>
-                    <div class="w-16 sm:w-24 h-1 bg-bus-orange mx-auto mt-4 sm:mt-6"></div>
+                    <div class="w-12 xs:w-16 sm:w-24 h-1 bg-bus-orange mx-auto mt-3 sm:mt-4 md:mt-6"></div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-center mb-6">
-                        <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
+                <div class="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center mb-4 sm:mb-6">
+                        <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-16 sm:w-20 h-16 sm:h-20 flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
+                            <svg width="32" height="32" class="sm:w-10 sm:h-10" viewBox="0 0 24 24" fill="white">
                                 <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C15.4,11.5 16,12.4 16,13V16C16,17.4 15.4,18 14.8,18H9.2C8.6,18 8,17.4 8,16V13C8,12.4 8.6,11.5 9.2,11.5V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,10V11.5H13.5V10C13.5,8.7 12.8,8.2 12,8.2Z"/>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-bus-dark mb-3" data-translate="services_card1_title">
+                        <h3 class="text-lg xs:text-xl sm:text-2xl font-bold text-bus-dark mb-2 sm:mb-3 leading-tight" data-translate="services_card1_title">
                             Gain de temps & sécurité
                         </h3>
                     </div>
-                    <p class="text-gray-600 text-center leading-relaxed mb-6" data-translate="services_card1_desc">
+                    <p class="text-sm xs:text-base text-gray-600 text-center leading-relaxed mb-4 sm:mb-6" data-translate="services_card1_desc">
                         Réduction des immobilisations + <span class="font-semibold text-bus-orange">cars de substitution</span>
                     </p>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <ul class="space-y-2 text-sm text-gray-700">
+                    <div class="bg-gray-50 rounded-lg p-3 sm:p-4">
+                        <ul class="space-y-2 text-xs xs:text-sm text-gray-700">
                             <li class="flex items-center">
-                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-2 sm:mr-3 flex-shrink-0"></div>
                                 <span data-translate="services_card1_feature1">Intervention rapide</span>
                             </li>
                             <li class="flex items-center">
-                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-2 sm:mr-3 flex-shrink-0"></div>
                                 <span data-translate="services_card1_feature2">Véhicules de remplacement</span>
                             </li>
                             <li class="flex items-center">
-                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-2 sm:mr-3 flex-shrink-0"></div>
                                 <span data-translate="services_card1_feature3">Sécurité des passagers</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-center mb-6">
-                        <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                <div class="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center mb-4 sm:mb-6">
+                        <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-16 sm:w-20 h-16 sm:h-20 flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
+                            <svg width="32" height="32" class="sm:w-10 sm:h-10" viewBox="0 0 24 24" fill="white">
                                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-bus-dark mb-3" data-translate="services_card2_title">
+                        <h3 class="text-lg xs:text-xl sm:text-2xl font-bold text-bus-dark mb-2 sm:mb-3 leading-tight" data-translate="services_card2_title">
                             réseau de prestataires à votre services
                         </h3>
                     </div>
-                    <p class="text-gray-600 text-center leading-relaxed mb-6" data-translate="services_card2_desc">
+                    <p class="text-sm xs:text-base text-gray-600 text-center leading-relaxed mb-4 sm:mb-6" data-translate="services_card2_desc">
                         <span class="font-semibold text-bus-orange">Dépanneurs partenaires, contrôle conformité</span>
                     </p>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <ul class="space-y-2 text-sm text-gray-700">
+                    <div class="bg-gray-50 rounded-lg p-3 sm:p-4">
+                        <ul class="space-y-2 text-xs xs:text-sm text-gray-700">
                             <li class="flex items-center">
-                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-2 sm:mr-3 flex-shrink-0"></div>
                                 <span data-translate="services_card2_feature1">Dépanneurs</span>
                             </li>
                             <li class="flex items-center">
-                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-2 sm:mr-3 flex-shrink-0"></div>
                                 <span data-translate="services_card2_feature2">Garages</span>
                             </li>
                             <li class="flex items-center">
-                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-2 sm:mr-3 flex-shrink-0"></div>
                                 <span data-translate="services_card2_feature3">Contrôle qualité permanent</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-center mb-6">
-                        <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                <div class="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center mb-4 sm:mb-6">
+                        <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-16 sm:w-20 h-16 sm:h-20 flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
+                            <svg width="32" height="32" class="sm:w-10 sm:h-10" viewBox="0 0 24 24" fill="white">
                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-bus-dark mb-3" data-translate="services_card3_title">
+                        <h3 class="text-lg xs:text-xl sm:text-2xl font-bold text-bus-dark mb-2 sm:mb-3 leading-tight" data-translate="services_card3_title">
                             Assistance technique et juridique
                         </h3>
                     </div>
-                    <p class="text-gray-600 text-center leading-relaxed mb-6" data-translate="services_card3_desc">
+                    <p class="text-sm xs:text-base text-gray-600 text-center leading-relaxed mb-4 sm:mb-6" data-translate="services_card3_desc">
                         Support expert pour litiges et réglementations
                     </p>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <ul class="space-y-2 text-sm text-gray-700">
+                    <div class="bg-gray-50 rounded-lg p-3 sm:p-4">
+                        <ul class="space-y-2 text-xs xs:text-sm text-gray-700">
                             <li class="flex items-center">
-                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-2 sm:mr-3 flex-shrink-0"></div>
                                 <span data-translate="services_card3_feature1">Conseil juridique spécialisé</span>
                             </li>
                             <li class="flex items-center">
-                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-2 sm:mr-3 flex-shrink-0"></div>
                                 <span data-translate="services_card3_feature2">Gestion des litiges</span>
                             </li>
                             <li class="flex items-center">
-                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-2 sm:mr-3 flex-shrink-0"></div>
                                 <span data-translate="services_card3_feature3">Conformité réglementaire</span>
                             </li>
                         </ul>
@@ -835,74 +838,74 @@
     </section>
 
     <!-- Section Nos Partenaires Principaux -->
-    <section id="partenaires" class="py-12 sm:py-16 lg:py-20 relative" style="background-image: url('https://i.ibb.co/sppV0p5L/Gemini-Generated-Image-o98pano98pano98p.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <section id="partenaires" class="py-8 sm:py-12 md:py-16 lg:py-20 relative" style="background-image: url('https://i.ibb.co/TB8rwZtK/3-Nos-Partenaires-Principaux.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="absolute inset-0 bg-white bg-opacity-30"></div>
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-12 sm:mb-16">
-                <div class="bg-white bg-opacity-90 rounded-2xl p-6 sm:p-8 shadow-lg inline-block">
-                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-bus-dark mb-4" data-translate="partners_title">
+        <div class="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-8 sm:mb-12 md:mb-16">
+                <div class="bg-white bg-opacity-90 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg inline-block max-w-full">
+                    <h2 class="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-bus-dark mb-2 sm:mb-4 leading-tight" data-translate="partners_title">
                         Nos Partenaires <span class="text-bus-orange">Principaux</span>
                     </h2>
-                    <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto mb-6 sm:mb-8" data-translate="partners_subtitle">
+                    <p class="text-sm xs:text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto mb-4 sm:mb-6 md:mb-8 leading-relaxed" data-translate="partners_subtitle">
                         Réseau complet pour votre assistance en cas de panne.
                     </p>
-                    <div class="w-16 sm:w-24 h-1 bg-bus-orange mx-auto"></div>
+                    <div class="w-12 xs:w-16 sm:w-24 h-1 bg-bus-orange mx-auto"></div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-16">
-                <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-bus-orange hover:text-white transition-all duration-300 group">
-                    <div class="w-16 h-16 bg-bus-orange group-hover:bg-white rounded-full flex items-center justify-center mx-auto mb-4 transition-colors">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="white" class="group-hover:fill-bus-orange">
+            <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12 md:mb-16">
+                <div class="text-center p-4 sm:p-6 bg-gray-50 rounded-lg sm:rounded-xl hover:bg-bus-orange hover:text-white transition-all duration-300 group">
+                    <div class="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 bg-bus-orange group-hover:bg-white rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 transition-colors">
+                        <svg width="24" height="24" class="xs:w-7 xs:h-7 sm:w-8 sm:h-8" viewBox="0 0 24 24" fill="white" class="group-hover:fill-bus-orange">
                             <path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2" data-translate="partners_card1_title">Réseau autocariste</h3>
-                    <p class="text-sm opacity-80" data-translate="partners_card1_desc">France Europe</p>
+                    <h3 class="text-sm xs:text-base sm:text-lg font-semibold mb-1 sm:mb-2 leading-tight" data-translate="partners_card1_title">Réseau autocariste</h3>
+                    <p class="text-xs xs:text-sm opacity-80" data-translate="partners_card1_desc">France Europe</p>
                 </div>
 
-                <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-bus-orange hover:text-white transition-all duration-300 group">
-                    <div class="w-16 h-16 bg-bus-orange group-hover:bg-white rounded-full flex items-center justify-center mx-auto mb-4 transition-colors">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="white" class="group-hover:fill-bus-orange">
+                <div class="text-center p-4 sm:p-6 bg-gray-50 rounded-lg sm:rounded-xl hover:bg-bus-orange hover:text-white transition-all duration-300 group">
+                    <div class="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 bg-bus-orange group-hover:bg-white rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 transition-colors">
+                        <svg width="24" height="24" class="xs:w-7 xs:h-7 sm:w-8 sm:h-8" viewBox="0 0 24 24" fill="white" class="group-hover:fill-bus-orange">
                             <path d="M9.83 12.83l-1.41 1.41L12 17.83l6.58-6.59-1.41-1.41L12 15l-2.17-2.17zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2" data-translate="partners_card2_title">Conseil juridique</h3>
-                    <p class="text-sm opacity-80" data-translate="partners_card2_desc">Gestion litiges</p>
+                    <h3 class="text-sm xs:text-base sm:text-lg font-semibold mb-1 sm:mb-2 leading-tight" data-translate="partners_card2_title">Conseil juridique</h3>
+                    <p class="text-xs xs:text-sm opacity-80" data-translate="partners_card2_desc">Gestion litiges</p>
                 </div>
 
-                <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-bus-orange hover:text-white transition-all duration-300 group">
-                    <div class="w-16 h-16 bg-bus-orange group-hover:bg-white rounded-full flex items-center justify-center mx-auto mb-4 transition-colors">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="white" class="group-hover:fill-bus-orange">
+                <div class="text-center p-4 sm:p-6 bg-gray-50 rounded-lg sm:rounded-xl hover:bg-bus-orange hover:text-white transition-all duration-300 group">
+                    <div class="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 bg-bus-orange group-hover:bg-white rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 transition-colors">
+                        <svg width="24" height="24" class="xs:w-7 xs:h-7 sm:w-8 sm:h-8" viewBox="0 0 24 24" fill="white" class="group-hover:fill-bus-orange">
                             <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4zM6.7 8.8c-.7.7-1.9.7-2.6 0-.7-.7-.7-1.9 0-2.6.7-.7 1.9-.7 2.6 0 .7.7.7 1.9 0 2.6z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2" data-translate="partners_card3_title">Conseiller techniques</h3>
-                    <p class="text-sm opacity-80" data-translate="partners_card3_desc">Diagnostic & expertise</p>
+                    <h3 class="text-sm xs:text-base sm:text-lg font-semibold mb-1 sm:mb-2 leading-tight" data-translate="partners_card3_title">Conseiller techniques</h3>
+                    <p class="text-xs xs:text-sm opacity-80" data-translate="partners_card3_desc">Diagnostic & expertise</p>
                 </div>
 
-                <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-bus-orange hover:text-white transition-all duration-300 group">
-                    <div class="w-16 h-16 bg-bus-orange group-hover:bg-white rounded-full flex items-center justify-center mx-auto mb-4 transition-colors">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="white" class="group-hover:fill-bus-orange">
+                <div class="text-center p-4 sm:p-6 bg-gray-50 rounded-lg sm:rounded-xl hover:bg-bus-orange hover:text-white transition-all duration-300 group">
+                    <div class="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 bg-bus-orange group-hover:bg-white rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 transition-colors">
+                        <svg width="24" height="24" class="xs:w-7 xs:h-7 sm:w-8 sm:h-8" viewBox="0 0 24 24" fill="white" class="group-hover:fill-bus-orange">
                             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2" data-translate="partners_card4_title">Suivi international</h3>
-                    <p class="text-sm opacity-80" data-translate="partners_card4_desc">Coordination multilingues</p>
+                    <h3 class="text-sm xs:text-base sm:text-lg font-semibold mb-1 sm:mb-2 leading-tight" data-translate="partners_card4_title">Suivi international</h3>
+                    <p class="text-xs xs:text-sm opacity-80" data-translate="partners_card4_desc">Coordination multilingues</p>
                 </div>
             </div>
 
             <!-- Couverture européenne -->
             <div class="text-center">
-                <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 shadow-lg inline-block">
-                    <h3 class="text-2xl font-bold text-bus-dark whitespace-nowrap" data-translate="partners_coverage">Nous assurons une couverture européenne</h3>
+                <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg inline-block max-w-full">
+                    <h3 class="text-lg xs:text-xl sm:text-2xl font-bold text-bus-dark leading-tight" data-translate="partners_coverage">Nous assurons une couverture européenne</h3>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Section Pour les Prestataires -->
-    <section id="prestataires" class="py-12 sm:py-16 lg:py-20 relative" style="background-image: url('https://i.ibb.co/JR8twB9J/Gemini-Generated-Image-d38iwmd38iwmd38i.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <section id="prestataires" class="py-12 sm:py-16 lg:py-20 relative" style="background-image: url('https://i.ibb.co/MkrVjmjd/4-Pour-les-Prestataires.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="absolute inset-0 bg-gray-50 bg-opacity-40"></div>
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-12 sm:mb-16">
@@ -1305,5 +1308,5 @@
             closeAutocaristesForm();
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97de2f978347b77d',t:'MTc1NzY2NzMyNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97de546ba551b733',t:'MTc1NzY2ODgzNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
