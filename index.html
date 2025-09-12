@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buses Solutions - Assistance professionnelle aux autocars en Europe</title>
+    <title>Buses Solutions - Assistance professionnelle aux autocaristes à travers l'Europe</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,17 +21,17 @@
         // Système de traduction multilingue
         const translations = {
             fr: {
-                title: "Buses Solutions - Assistance professionnelle aux autocars en Europe",
+                title: "Buses Solutions - Assistance professionnelle aux autocaristes à travers l'Europe",
                 nav_services: "Services",
                 nav_partners: "Partenaires",
                 nav_providers: "Prestataires",
                 nav_contact: "Contact",
-                nav_demo: "Démo gratuite",
+                nav_demo: "",
                 hero_title: "Buses Solutions",
-                hero_subtitle: "Assistance professionnelle aux autocars en Europe",
-                hero_description: "Votre partenaire de confiance pour l'assistance routière en Europe.",
+                hero_subtitle: "Assistance professionnelle aux autocaristes à travers l'Europe",
+                hero_description: "Un savoir faire à votre disposition",
                 hero_problem: "Un problème ? Nous sommes votre solution !",
-                hero_cta: "Demander une démo gratuite",
+                hero_cta: "Plus d'infos",
                 feature_24h: "Assistance 24h/24",
                 feature_24h_desc: "7j/7",
                 feature_network: "Réseau certifié",
@@ -40,8 +40,8 @@
                 feature_coverage_desc: "Juridique, traduction, suivi",
                 feature_time: "Gain de temps",
                 feature_time_desc: "Prise en charge complète",
-                services_title: "Services pour les Autocaristes",
-                services_subtitle: "Une assistance complète à portée de main",
+                services_title: "Services dédié aux autocaristes",
+                services_subtitle: "un accompagnement complet à portée de main",
                 contact_title: "Demander une démo",
                 contact_subtitle: "Nous pouvons également venir vous présenter Buses Solutions directement.",
                 form_name: "Nom",
@@ -61,8 +61,8 @@
                 nav_contact: "Contact",
                 nav_demo: "Free Demo",
                 hero_title: "Buses Solutions",
-                hero_subtitle: "Professional bus assistance in Europe",
-                hero_description: "Your trusted partner for roadside assistance in Europe.",
+                hero_subtitle: "Professional assistance for bus operators across Europe",
+                hero_description: "Our expertise at your disposal",
                 hero_problem: "A problem? We are your solution!",
                 hero_cta: "Request a free demo",
                 feature_24h: "24/7 Assistance",
@@ -279,11 +279,11 @@
                 
                 <!-- Menu mobile button -->
                 <div class="md:hidden flex items-center space-x-2">
-                    <!-- Sélecteur de langue mobile -->
+                    <!-- Sélecteur de langue mobile avec drapeaux -->
                     <div class="flex space-x-1 bg-gray-100 rounded-lg p-1">
-                        <button onclick="changeLanguage('fr')" data-lang="fr" class="lang-btn px-2 py-1 rounded-md text-xs font-medium bg-bus-orange text-white transition-colors">FR</button>
-                        <button onclick="changeLanguage('en')" data-lang="en" class="lang-btn px-2 py-1 rounded-md text-xs font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">EN</button>
-                        <button onclick="changeLanguage('es')" data-lang="es" class="lang-btn px-2 py-1 rounded-md text-xs font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">ES</button>
+                        <button onclick="changeLanguage('fr')" data-lang="fr" class="lang-btn px-2 py-1 rounded-md text-xs font-medium bg-bus-orange text-white transition-colors">🇫🇷</button>
+                        <button onclick="changeLanguage('en')" data-lang="en" class="lang-btn px-2 py-1 rounded-md text-xs font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">🇬🇧</button>
+                        <button onclick="changeLanguage('es')" data-lang="es" class="lang-btn px-2 py-1 rounded-md text-xs font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">🇪🇸</button>
                     </div>
                     <button id="mobile-menu-btn" class="text-gray-700 hover:text-bus-orange focus:outline-none">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -294,13 +294,13 @@
                 
                 <!-- Desktop menu -->
                 <div class="hidden md:flex items-center space-x-4">
-                    <!-- Sélecteur de langue desktop -->
+                    <!-- Sélecteur de langue desktop avec drapeaux -->
                     <div class="flex space-x-1 bg-gray-100 rounded-lg p-1">
-                        <button onclick="changeLanguage('fr')" data-lang="fr" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-bus-orange text-white transition-colors">FR</button>
-                        <button onclick="changeLanguage('en')" data-lang="en" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">EN</button>
-                        <button onclick="changeLanguage('es')" data-lang="es" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">ES</button>
-                        <button onclick="changeLanguage('pt')" data-lang="pt" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">PT</button>
-                        <button onclick="changeLanguage('it')" data-lang="it" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">IT</button>
+                        <button onclick="changeLanguage('fr')" data-lang="fr" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-bus-orange text-white transition-colors">🇫🇷 FR</button>
+                        <button onclick="changeLanguage('en')" data-lang="en" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">🇬🇧 EN</button>
+                        <button onclick="changeLanguage('es')" data-lang="es" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">🇪🇸 ES</button>
+                        <button onclick="changeLanguage('pt')" data-lang="pt" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">🇵🇹 PT</button>
+                        <button onclick="changeLanguage('it')" data-lang="it" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">🇮🇹 IT</button>
                     </div>
                     
                     <div class="flex space-x-6 lg:space-x-8">
@@ -311,9 +311,7 @@
                     </div>
                 </div>
                 
-                <a href="#contact" class="bg-bus-orange hover:bg-orange-600 text-white px-3 sm:px-6 py-2 rounded-lg transition-colors text-sm sm:text-base" data-translate="nav_demo">
-                    Démo gratuite
-                </a>
+
             </div>
             
             <!-- Mobile menu -->
@@ -329,7 +327,7 @@
     </nav>
 
     <!-- Section Hero avec image d'autocar -->
-    <section class="min-h-screen flex items-center relative overflow-hidden pt-16 sm:pt-20" style="background-image: url('https://i.ibb.co/9HVrXw2z/1.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <section class="min-h-screen flex items-center relative overflow-hidden pt-16 sm:pt-20" style="background-image: url('https://i.ibb.co/fd4MHcmm/HERO3.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -415,83 +413,19 @@
 
     <!-- Section Services pour les Autocaristes -->
     <section id="services" class="py-12 sm:py-16 lg:py-20 relative" style="background-image: url('https://i.ibb.co/xSsdQKxG/2-Services-pour-les-Autocaristes.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        <div class="absolute inset-0 bg-white bg-opacity-90"></div>
+        <div class="absolute inset-0 bg-white bg-opacity-30"></div>
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-12 sm:mb-16">
                 <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-bus-dark mb-4" data-translate="services_title">
-                    Services pour les Autocaristes
+                    Services dédié aux autocaristes
                 </h2>
                 <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto" data-translate="services_subtitle">
-                    Une assistance complète à portée de main
+                    un accompagnement complet à portée de main
                 </p>
                 <div class="w-16 sm:w-24 h-1 bg-bus-orange mx-auto mt-4 sm:mt-6"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-center mb-6">
-                        <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-bus-dark mb-3">
-                            Assistance technique & juridique
-                        </h3>
-                    </div>
-                    <p class="text-gray-600 text-center leading-relaxed mb-6">
-                        Support expert <span class="font-semibold text-bus-orange">24/7</span> pour litiges et réglementations
-                    </p>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li class="flex items-center">
-                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
-                                Conseil juridique spécialisé
-                            </li>
-                            <li class="flex items-center">
-                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
-                                Gestion des litiges
-                            </li>
-                            <li class="flex items-center">
-                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
-                                Conformité réglementaire
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-center mb-6">
-                        <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-bus-dark mb-3">
-                            Réseau fiable de prestataires
-                        </h3>
-                    </div>
-                    <p class="text-gray-600 text-center leading-relaxed mb-6">
-                        Mise en relation avec des <span class="font-semibold text-bus-orange">partenaires certifiés</span>
-                    </p>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li class="flex items-center">
-                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
-                                Dépanneurs agréés
-                            </li>
-                            <li class="flex items-center">
-                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
-                                Garages spécialisés
-                            </li>
-                            <li class="flex items-center">
-                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
-                                Contrôle qualité permanent
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
                 <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                     <div class="text-center mb-6">
                         <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
@@ -523,20 +457,84 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center mb-6">
+                        <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-bus-dark mb-3">
+                            réseau de prestataires à votre services
+                        </h3>
+                    </div>
+                    <p class="text-gray-600 text-center leading-relaxed mb-6">
+                        <span class="font-semibold text-bus-orange">Dépanneurs partenaires, contrôle conformité</span>
+                    </p>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                Dépanneurs
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                Garages
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                Contrôle qualité permanent
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center mb-6">
+                        <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-bus-dark mb-3">
+                            Assistance technique et juridique
+                        </h3>
+                    </div>
+                    <p class="text-gray-600 text-center leading-relaxed mb-6">
+                        Support expert pour litiges et réglementations
+                    </p>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                Conseil juridique spécialisé
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                Gestion des litiges
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 bg-bus-orange rounded-full mr-3"></div>
+                                Conformité réglementaire
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Section Nos Partenaires Principaux -->
     <section id="partenaires" class="py-12 sm:py-16 lg:py-20 relative" style="background-image: url('https://i.ibb.co/TB8rwZtK/3-Nos-Partenaires-Principaux.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        <div class="absolute inset-0 bg-white bg-opacity-90"></div>
+        <div class="absolute inset-0 bg-white bg-opacity-30"></div>
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-12 sm:mb-16">
                 <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-bus-dark mb-4">
                     Nos Partenaires <span class="text-bus-orange">Principaux</span>
                 </h2>
                 <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto mb-6 sm:mb-8">
-                    Un écosystème complet pour votre assistance routière
+                    Réseau complet pour votre assistance en cas de panne.
                 </p>
                 <div class="w-16 sm:w-24 h-1 bg-bus-orange mx-auto"></div>
             </div>
@@ -545,30 +543,30 @@
                 <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-bus-orange hover:text-white transition-all duration-300 group">
                     <div class="w-16 h-16 bg-bus-orange group-hover:bg-white rounded-full flex items-center justify-center mx-auto mb-4 transition-colors">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="white" class="group-hover:fill-bus-orange">
-                            <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                            <path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Autocaristes</h3>
-                    <p class="text-sm opacity-80">France & Europe</p>
+                    <h3 class="text-lg font-semibold mb-2">Réseau autocariste</h3>
+                    <p class="text-sm opacity-80">France Europe</p>
                 </div>
 
                 <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-bus-orange hover:text-white transition-all duration-300 group">
                     <div class="w-16 h-16 bg-bus-orange group-hover:bg-white rounded-full flex items-center justify-center mx-auto mb-4 transition-colors">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="white" class="group-hover:fill-bus-orange">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            <path d="M9.83 12.83l-1.41 1.41L12 17.83l6.58-6.59-1.41-1.41L12 15l-2.17-2.17zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Services juridiques</h3>
+                    <h3 class="text-lg font-semibold mb-2">Conseil juridique</h3>
                     <p class="text-sm opacity-80">Gestion litiges</p>
                 </div>
 
                 <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-bus-orange hover:text-white transition-all duration-300 group">
                     <div class="w-16 h-16 bg-bus-orange group-hover:bg-white rounded-full flex items-center justify-center mx-auto mb-4 transition-colors">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="white" class="group-hover:fill-bus-orange">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4zM6.7 8.8c-.7.7-1.9.7-2.6 0-.7-.7-.7-1.9 0-2.6.7-.7 1.9-.7 2.6 0 .7.7.7 1.9 0 2.6z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Référents techniques</h3>
+                    <h3 class="text-lg font-semibold mb-2">Conseiller techniques</h3>
                     <p class="text-sm opacity-80">Diagnostic & expertise</p>
                 </div>
 
@@ -579,106 +577,238 @@
                         </svg>
                     </div>
                     <h3 class="text-lg font-semibold mb-2">Suivi international</h3>
-                    <p class="text-sm opacity-80">Coordination Europe</p>
+                    <p class="text-sm opacity-80">Coordination multilingues</p>
                 </div>
             </div>
 
             <!-- Couverture européenne -->
             <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg">
-                <h3 class="text-2xl font-bold text-center text-bus-dark mb-8">Notre couverture européenne</h3>
-                
-                <div class="flex flex-wrap justify-center items-center gap-6">
-                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow">
-                        <div class="w-4 h-4 bg-bus-orange rounded-full mr-2"></div>
-                        <span class="font-semibold">France</span>
-                    </div>
-                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow">
-                        <div class="w-4 h-4 bg-bus-orange rounded-full mr-2"></div>
-                        <span class="font-semibold">Belgique</span>
-                    </div>
-                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow">
-                        <div class="w-4 h-4 bg-bus-orange rounded-full mr-2"></div>
-                        <span class="font-semibold">Espagne</span>
-                    </div>
-                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow">
-                        <div class="w-4 h-4 bg-bus-orange rounded-full mr-2"></div>
-                        <span class="font-semibold">Portugal</span>
-                    </div>
-                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow">
-                        <div class="w-4 h-4 bg-bus-orange rounded-full mr-2"></div>
-                        <span class="font-semibold">Italie</span>
-                    </div>
-                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow">
-                        <div class="w-4 h-4 bg-bus-orange rounded-full mr-2"></div>
-                        <span class="font-semibold">Grande-Bretagne</span>
-                    </div>
-                </div>
+                <h3 class="text-2xl font-bold text-center text-bus-dark mb-8">Nous assurons une couverture européenne</h3>
             </div>
         </div>
     </section>
 
     <!-- Section Pour les Prestataires -->
     <section id="prestataires" class="py-12 sm:py-16 lg:py-20 relative" style="background-image: url('https://i.ibb.co/MkrVjmjd/4-Pour-les-Prestataires.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        <div class="absolute inset-0 bg-gray-50 bg-opacity-90"></div>
+        <div class="absolute inset-0 bg-gray-50 bg-opacity-40"></div>
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-12 sm:mb-16">
-                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-bus-dark mb-4">
-                    Pour les <span class="text-bus-orange">Prestataires</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-bus-dark mb-4 flex items-center justify-center gap-4">
+                    <span>Devenez nos <span class="text-bus-orange">alliés</span></span>
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor" class="text-bus-orange">
+                        <path d="M11,2V8.5C11,9.33 11.67,10 12.5,10H19V20C19,21.11 18.11,22 17,22H7C5.89,22 5,21.11 5,20V4C5,2.89 5.89,2 7,2H11M13,3.5V9H18.5L13,3.5M8,12V14H16V12H8M8,16V18H13V16H8Z"/>
+                    </svg>
                 </h2>
-                <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                    Développez votre activité avec notre plateforme
-                </p>
                 <div class="w-16 sm:w-24 h-1 bg-bus-orange mx-auto mt-4 sm:mt-6"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Tuile Prestataires -->
                 <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
                     <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 5.5 15.5 8zM12 19c-3.87 0-7-3.13-7-7 0-.84.16-1.65.43-2.4L12 13l6.57-3.4c.27.75.43 1.56.43 2.4 0 3.87-3.13 7-7 7z"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-bus-dark mb-4">Visibilité accrue</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Augmentez votre visibilité auprès des autocaristes européens
+                    <h3 class="text-2xl font-bold text-bus-dark mb-4">Partenaire</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Prestataires rejoignez nous
                     </p>
+                    <button onclick="openPrestatairesForm()" class="bg-bus-orange hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                        Rejoindre le réseau
+                    </button>
                 </div>
 
+                <!-- Tuile Autocaristes -->
                 <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
                     <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            <path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-bus-dark mb-4">Missions internationales</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Accédez à des missions internationales pour développer votre activité
+                    <h3 class="text-2xl font-bold text-bus-dark mb-4">Autocaristes</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Autocaristes rejoignez nous
                     </p>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
-                    <div class="bg-gradient-to-br from-bus-orange to-orange-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-bus-dark mb-4">Suivi facilité</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Suivi administratif & paiements sécurisés sous 48h
-                    </p>
+                    <button onclick="openAutocaristesForm()" class="bg-bus-orange hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                        Rejoindre le réseau
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Modal Formulaire Prestataires -->
+    <div id="prestatairesModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6 sm:p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-bus-dark">Fiche Prestataire</h3>
+                    <button onclick="closePrestatairesForm()" class="text-gray-500 hover:text-gray-700">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <form class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Nom *</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Prénom *</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Type de prestations proposées *</label>
+                        <div class="grid grid-cols-2 gap-2">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="mr-2 text-bus-orange">
+                                <span class="text-sm">Remorquage</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="mr-2 text-bus-orange">
+                                <span class="text-sm">Porte char</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="mr-2 text-bus-orange">
+                                <span class="text-sm">Climatisation</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="mr-2 text-bus-orange">
+                                <span class="text-sm">Pare brise</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Adresse du garage *</label>
+                        <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" rows="3" required></textarea>
+                    </div>
+                    
+                    <div>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="mr-2 text-bus-orange">
+                            <span class="text-sm">Précisez si mobilité avec un camion d'intervention</span>
+                        </label>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Téléphone de contact *</label>
+                        <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
+                    </div>
+                    
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                        <p class="text-sm text-yellow-800">
+                            <strong>Important :</strong> En cas de partenariat, un rendez-vous est obligatoire pour se rencontrer et fixer les conditions du partenariat.
+                        </p>
+                    </div>
+                    
+                    <div class="flex gap-4 pt-4">
+                        <button type="submit" class="flex-1 bg-bus-orange hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-all">
+                            Envoyer ma candidature
+                        </button>
+                        <button type="button" onclick="closePrestatairesForm()" class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-all">
+                            Annuler
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Formulaire Autocaristes -->
+    <div id="autocaristesModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6 sm:p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-bus-dark">Fiche Autocariste</h3>
+                    <button onclick="closeAutocaristesForm()" class="text-gray-500 hover:text-gray-700">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Nom de l'entreprise *</label>
+                        <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Adresse de l'entreprise *</label>
+                        <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" rows="3" placeholder="Précisez si multi sites" required></textarea>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Nombre de véhicules *</label>
+                            <input type="number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Capacité max sur parc</label>
+                            <input type="number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Capacité mini sur parc</label>
+                            <input type="number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="mr-2 text-bus-orange">
+                                <span class="text-sm">Disposez-vous d'un double étage ?</span>
+                            </label>
+                        </div>
+                        <div>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="mr-2 text-bus-orange">
+                                <span class="text-sm">Disposez-vous d'une remorque ?</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Téléphone à contacter en cas d'urgence 24H24 7J/7 *</label>
+                        <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
+                    </div>
+                    
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-blue-800 mb-2">Engagements mutuels :</h4>
+                        <div class="text-sm text-blue-700 space-y-2">
+                            <p><strong>Votre engagement :</strong> En cas d'adhésion, vous vous engagez à pouvoir porter assistance à un autocariste partenaire français ou étranger (si disponibilités de véhicules et chauffeurs).</p>
+                            <p><strong>Notre engagement :</strong> Nous nous engageons à vous porter assistance par un autocariste partenaire en France et en Europe.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 pt-4">
+                        <button type="submit" class="flex-1 bg-bus-orange hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-all">
+                            Envoyer ma candidature
+                        </button>
+                        <button type="button" onclick="closeAutocaristesForm()" class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-all">
+                            Annuler
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- Section Formulaire de Contact -->
     <section id="contact" class="py-12 sm:py-16 lg:py-20 relative" style="background-image: url('https://i.ibb.co/fddjWZnD/5-Formulaire-de-Contact-Footer.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        <div class="absolute inset-0 bg-white bg-opacity-90"></div>
+        <div class="absolute inset-0 bg-white bg-opacity-30"></div>
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-8 sm:mb-12">
                     <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-bus-dark mb-4" data-translate="contact_title">
-                        Demander une démo
+                        Demander plus d'informations
                     </h2>
                     <p class="text-base sm:text-lg md:text-xl text-gray-600" data-translate="contact_subtitle">
                         Nous pouvons également venir vous présenter Buses Solutions directement.
@@ -689,9 +819,9 @@
                     <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">
-                                <span data-translate="form_name">Nom</span> *
+                                <span data-translate="form_name">Nom raison sociale de l'entreprise</span> *
                             </label>
-                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="Votre nom complet">
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="Nom de votre entreprise">
                         </div>
                         
                         <div>
@@ -708,26 +838,11 @@
                             <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="+33 1 23 45 67 89">
                         </div>
                         
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">
-                                <span data-translate="form_vehicles">Nombre de véhicules</span>
-                            </label>
-                            <input type="number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" placeholder="Ex: 15">
-                        </div>
+
                         
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">
-                                <span data-translate="form_location">Lieu du dépôt</span>
-                            </label>
-                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" placeholder="Ville, Région">
-                        </div>
+
                         
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">
-                                <span data-translate="form_emergency">Numéro d'urgence</span>
-                            </label>
-                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" placeholder="Numéro 24h/24">
-                        </div>
+
                         
                         <div class="md:col-span-2">
                             <label class="flex items-center cursor-pointer">
@@ -740,7 +855,7 @@
                         
                         <div class="md:col-span-2 text-center">
                             <button type="submit" class="bg-bus-orange hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg" data-translate="form_submit">
-                                Demander une démo maintenant
+                                Je souhaite en savoir plus
                             </button>
                             <p class="text-sm text-gray-500 mt-4">
                                 ⚡ Réponse sous 2h en moyenne • 🔒 Données sécurisées
@@ -770,8 +885,9 @@
                     <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Contact</h4>
                     <div class="space-y-2 text-gray-300 text-sm sm:text-base">
                         <p>📧 contact@buses-solutions.fr</p>
-                        <p>📞 +33 1 23 45 67 89</p>
-                        <p>📍 123 Avenue de l'Europe<br>75001 Paris, France</p>
+                        <p>📞 +33 6 40 74 06 92</p>
+                        <p>📍 Bus Solutions<br>48 route de Chichery<br>89380 Appoigny, France</p>
+                        <p class="text-xs text-gray-400 mt-2">TVA: FR 43990201295</p>
                     </div>
                 </div>
                 
@@ -824,6 +940,53 @@
             e.preventDefault();
             alert('Merci pour votre demande ! Nous vous recontacterons rapidement.');
         });
+
+        // Fonctions pour les modals
+        function openPrestatairesForm() {
+            document.getElementById('prestatairesModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePrestatairesForm() {
+            document.getElementById('prestatairesModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function openAutocaristesForm() {
+            document.getElementById('autocaristesModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeAutocaristesForm() {
+            document.getElementById('autocaristesModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fermer les modals en cliquant à l'extérieur
+        document.getElementById('prestatairesModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePrestatairesForm();
+            }
+        });
+
+        document.getElementById('autocaristesModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeAutocaristesForm();
+            }
+        });
+
+        // Gestion des soumissions de formulaires dans les modals
+        document.querySelector('#prestatairesModal form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre candidature ! Nous vous recontacterons rapidement pour organiser un rendez-vous.');
+            closePrestatairesForm();
+        });
+
+        document.querySelector('#autocaristesModal form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre candidature ! Nous vous recontacterons rapidement pour finaliser votre adhésion.');
+            closeAutocaristesForm();
+        });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97d5c4d4765aec8b',t:'MTc1NzU3OTA2Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97ddd9e8e7a0b9c0',t:'MTc1NzY2MzgxNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
