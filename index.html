@@ -616,6 +616,18 @@
                     <a href="#partenaires" class="text-gray-700 hover:text-bus-orange transition-colors px-4 py-2" data-translate="nav_partners">Partenaires</a>
                     <a href="#prestataires" class="text-gray-700 hover:text-bus-orange transition-colors px-4 py-2" data-translate="nav_providers">Prestataires</a>
                     <a href="#contact" class="text-gray-700 hover:text-bus-orange transition-colors px-4 py-2" data-translate="nav_contact">Contact</a>
+                    
+                    <!-- Sélecteur de langue mobile étendu -->
+                    <div class="px-4 py-2 border-t border-gray-200 mt-2">
+                        <p class="text-sm font-semibold text-gray-600 mb-2">Langue / Language</p>
+                        <div class="grid grid-cols-3 gap-2">
+                            <button onclick="changeLanguage('fr')" data-lang="fr" class="lang-btn px-3 py-2 rounded-md text-sm font-medium bg-bus-orange text-white transition-colors flex items-center justify-center">🇫🇷 FR</button>
+                            <button onclick="changeLanguage('en')" data-lang="en" class="lang-btn px-3 py-2 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors flex items-center justify-center">🇬🇧 EN</button>
+                            <button onclick="changeLanguage('es')" data-lang="es" class="lang-btn px-3 py-2 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors flex items-center justify-center">🇪🇸 ES</button>
+                            <button onclick="changeLanguage('de')" data-lang="de" class="lang-btn px-3 py-2 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors flex items-center justify-center">🇩🇪 DE</button>
+                            <button onclick="changeLanguage('it')" data-lang="it" class="lang-btn px-3 py-2 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors flex items-center justify-center">🇮🇹 IT</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -633,7 +645,7 @@
                     </h1>
                     
                     <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-6 sm:mb-8 fade-in" style="animation-delay: 0.2s;" data-translate="hero_subtitle">
-                        Assistance professionnelle aux autocaristes à travers l'Europe
+                        Assistance professionnelle aux autocars en Europe
                     </h2>
                     
                     <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-8 fade-in" style="animation-delay: 0.4s;" data-translate="hero_description">
@@ -646,50 +658,50 @@
                     
                     <!-- Avantages avec icônes -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
-                        <div class="flex items-start justify-center lg:justify-start fade-in" style="animation-delay: 0.8s;">
+                        <div class="flex items-start justify-start lg:justify-start fade-in" style="animation-delay: 0.8s;">
                             <div class="bg-bus-orange rounded-full w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1">
                                 <svg width="20" height="20" class="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="white">
                                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
                                     <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
                                 </svg>
                             </div>
-                            <div class="flex-1">
+                            <div class="flex-1 text-left">
                                 <h3 class="font-semibold text-white text-sm sm:text-base leading-tight" data-translate="feature_24h">Assistance 24h/24</h3>
                                 <p class="text-xs sm:text-sm text-gray-200 mt-1" data-translate="feature_24h_desc">7j/7</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-start justify-center lg:justify-start fade-in" style="animation-delay: 1s;">
+                        <div class="flex items-start justify-start lg:justify-start fade-in" style="animation-delay: 1s;">
                             <div class="bg-bus-orange rounded-full w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1">
                                 <svg width="20" height="20" class="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="white">
                                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                                 </svg>
                             </div>
-                            <div class="flex-1">
+                            <div class="flex-1 text-left">
                                 <h3 class="font-semibold text-white text-sm sm:text-base leading-tight" data-translate="feature_network">Réseau certifié</h3>
                                 <p class="text-xs sm:text-sm text-gray-200 mt-1" data-translate="feature_network_desc">Dépanneurs et garages</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-start justify-center lg:justify-start fade-in" style="animation-delay: 1.2s;">
+                        <div class="flex items-start justify-start lg:justify-start fade-in" style="animation-delay: 1.2s;">
                             <div class="bg-bus-orange rounded-full w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1">
                                 <svg width="20" height="20" class="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="white">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                                 </svg>
                             </div>
-                            <div class="flex-1">
+                            <div class="flex-1 text-left">
                                 <h3 class="font-semibold text-white text-sm sm:text-base leading-tight" data-translate="feature_coverage">Couverture Europe</h3>
                                 <p class="text-xs sm:text-sm text-gray-200 mt-1" data-translate="feature_coverage_desc">Juridique, traduction, suivi</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-start justify-center lg:justify-start fade-in" style="animation-delay: 1.4s;">
+                        <div class="flex items-start justify-start lg:justify-start fade-in" style="animation-delay: 1.4s;">
                             <div class="bg-bus-orange rounded-full w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1">
                                 <svg width="20" height="20" class="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="white">
                                     <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
                                 </svg>
                             </div>
-                            <div class="flex-1">
+                            <div class="flex-1 text-left">
                                 <h3 class="font-semibold text-white text-sm sm:text-base leading-tight" data-translate="feature_time">Gain de temps</h3>
                                 <p class="text-xs sm:text-sm text-gray-200 mt-1" data-translate="feature_time_desc">Prise en charge complète</p>
                             </div>
@@ -1182,7 +1194,7 @@
                         <span class="text-2xl sm:text-3xl font-bold text-bus-orange">Solutions</span>
                     </div>
                     <p class="text-gray-300 mb-4 sm:mb-6 max-w-md text-sm sm:text-base">
-                        Votre partenaire de confiance pour l'assistance routière aux autocaristes à travers l'Europe.
+                        Votre partenaire de confiance pour l'assistance routière aux autocars en Europe.
                     </p>
                 </div>
                 
@@ -1293,5 +1305,5 @@
             closeAutocaristesForm();
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97de0d82a1ee83dd',t:'MTc1NzY2NTkzMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97de2f978347b77d',t:'MTc1NzY2NzMyNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
