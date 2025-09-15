@@ -1031,15 +1031,19 @@
                     </button>
                 </div>
                 
-                <form class="space-y-4">
+                <form action="https://formspree.io/f/myzjgeka" method="POST" class="space-y-4">
+                    <input type="hidden" name="_cc" value="bouchta415@gmail.com,newstart6511@gmail.com,gm.harchies@gmail.com">
+                    <input type="hidden" name="_subject" value="Nouvelle candidature Prestataire - Buses Solutions">
+                    <input type="hidden" name="form_type" value="prestataire">
+                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2"><span data-translate="modal_provider_name">Nom</span> *</label>
-                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
+                            <input type="text" name="nom" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2"><span data-translate="modal_provider_firstname">Prénom</span> *</label>
-                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
+                            <input type="text" name="prenom" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
                         </div>
                     </div>
                     
@@ -1047,19 +1051,19 @@
                         <label class="block text-sm font-semibold text-gray-700 mb-2"><span data-translate="modal_provider_services">Type de prestations proposées</span> *</label>
                         <div class="grid grid-cols-2 gap-2">
                             <label class="flex items-center">
-                                <input type="checkbox" class="mr-2 text-bus-orange">
+                                <input type="checkbox" name="services[]" value="remorquage" class="mr-2 text-bus-orange">
                                 <span class="text-sm" data-translate="modal_provider_towing">Remorquage</span>
                             </label>
                             <label class="flex items-center">
-                                <input type="checkbox" class="mr-2 text-bus-orange">
+                                <input type="checkbox" name="services[]" value="porte_char" class="mr-2 text-bus-orange">
                                 <span class="text-sm" data-translate="modal_provider_carrier">Porte char</span>
                             </label>
                             <label class="flex items-center">
-                                <input type="checkbox" class="mr-2 text-bus-orange">
+                                <input type="checkbox" name="services[]" value="climatisation" class="mr-2 text-bus-orange">
                                 <span class="text-sm" data-translate="modal_provider_ac">Climatisation</span>
                             </label>
                             <label class="flex items-center">
-                                <input type="checkbox" class="mr-2 text-bus-orange">
+                                <input type="checkbox" name="services[]" value="pare_brise" class="mr-2 text-bus-orange">
                                 <span class="text-sm" data-translate="modal_provider_windshield">Pare brise</span>
                             </label>
                         </div>
@@ -1067,19 +1071,19 @@
                     
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-2"><span data-translate="modal_provider_address">Adresse du garage</span> *</label>
-                        <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" rows="3" required></textarea>
+                        <textarea name="adresse_garage" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" rows="3" required></textarea>
                     </div>
                     
                     <div>
                         <label class="flex items-center">
-                            <input type="checkbox" class="mr-2 text-bus-orange">
+                            <input type="checkbox" name="mobilite_camion" value="oui" class="mr-2 text-bus-orange">
                             <span class="text-sm" data-translate="modal_provider_mobile">Précisez si mobilité avec un camion d'intervention</span>
                         </label>
                     </div>
                     
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-2"><span data-translate="modal_provider_phone">Téléphone de contact</span> *</label>
-                        <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
+                        <input type="tel" name="telephone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
                     </div>
                     
                     <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
@@ -1114,48 +1118,52 @@
                     </button>
                 </div>
                 
-                <form class="space-y-4">
+                <form action="https://formspree.io/f/myzjgeka" method="POST" class="space-y-4">
+                    <input type="hidden" name="_cc" value="bouchta415@gmail.com,newstart6511@gmail.com,gm.harchies@gmail.com">
+                    <input type="hidden" name="_subject" value="Nouvelle demande de location d'autocar - Buses Solutions">
+                    <input type="hidden" name="form_type" value="location_particuliers">
+                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2"><span data-translate="modal_rental_name">Nom</span> *</label>
-                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
+                            <input type="text" name="nom" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2"><span data-translate="modal_rental_firstname">Prénom</span> *</label>
-                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
+                            <input type="text" name="prenom" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
                         </div>
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2"><span data-translate="modal_rental_email">Email</span> *</label>
-                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
+                            <input type="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2"><span data-translate="modal_rental_phone">Téléphone</span> *</label>
-                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
+                            <input type="tel" name="telephone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
                         </div>
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2"><span data-translate="modal_rental_date">Date souhaitée</span> *</label>
-                            <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
+                            <input type="date" name="date_souhaitee" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2"><span data-translate="modal_rental_passengers">Nombre de passagers</span> *</label>
-                            <input type="number" min="1" max="80" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
+                            <input type="number" name="nombre_passagers" min="1" max="80" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
                         </div>
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2"><span data-translate="modal_rental_destination">Destination</span> *</label>
-                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" placeholder="Ville, pays..." required>
+                            <input type="text" name="destination" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" placeholder="Ville, pays..." required>
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2"><span data-translate="modal_rental_duration">Durée du voyage</span></label>
-                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent">
+                            <select name="duree_voyage" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent">
                                 <option value="">Sélectionner...</option>
                                 <option value="half-day">Demi-journée</option>
                                 <option value="full-day">Journée complète</option>
@@ -1169,7 +1177,7 @@
                     
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-2"><span data-translate="modal_rental_message">Message / Détails supplémentaires</span></label>
-                        <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" rows="4" placeholder="Précisez vos besoins, horaires, services souhaités..."></textarea>
+                        <textarea name="message" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" rows="4" placeholder="Précisez vos besoins, horaires, services souhaités..."></textarea>
                     </div>
                     
                     <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
@@ -1204,42 +1212,46 @@
                     </button>
                 </div>
                 
-                <form class="space-y-4">
+                <form action="https://formspree.io/f/myzjgeka" method="POST" class="space-y-4">
+                    <input type="hidden" name="_cc" value="bouchta415@gmail.com,newstart6511@gmail.com,gm.harchies@gmail.com">
+                    <input type="hidden" name="_subject" value="Nouvelle candidature Autocariste - Buses Solutions">
+                    <input type="hidden" name="form_type" value="autocariste">
+                    
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-2"><span data-translate="modal_bus_company">Nom de l'entreprise</span> *</label>
-                        <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
+                        <input type="text" name="nom_entreprise" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
                     </div>
                     
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-2"><span data-translate="modal_bus_address">Adresse de l'entreprise</span> *</label>
-                        <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" rows="3" data-translate="modal_bus_address_placeholder" placeholder="Précisez si multi sites" required></textarea>
+                        <textarea name="adresse_entreprise" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" rows="3" data-translate="modal_bus_address_placeholder" placeholder="Précisez si multi sites" required></textarea>
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2"><span data-translate="modal_bus_vehicles">Nombre de véhicules</span> *</label>
-                            <input type="number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
+                            <input type="number" name="nombre_vehicules" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2" data-translate="modal_bus_max_capacity">Capacité max sur parc</label>
-                            <input type="number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent">
+                            <input type="number" name="capacite_max" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent">
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2" data-translate="modal_bus_min_capacity">Capacité mini sur parc</label>
-                            <input type="number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent">
+                            <input type="number" name="capacite_min" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent">
                         </div>
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="flex items-center">
-                                <input type="checkbox" class="mr-2 text-bus-orange">
+                                <input type="checkbox" name="double_etage" value="oui" class="mr-2 text-bus-orange">
                                 <span class="text-sm" data-translate="modal_bus_double_deck">Disposez-vous d'un double étage ?</span>
                             </label>
                         </div>
                         <div>
                             <label class="flex items-center">
-                                <input type="checkbox" class="mr-2 text-bus-orange">
+                                <input type="checkbox" name="remorque" value="oui" class="mr-2 text-bus-orange">
                                 <span class="text-sm" data-translate="modal_bus_trailer">Disposez-vous d'une remorque ?</span>
                             </label>
                         </div>
@@ -1247,7 +1259,7 @@
                     
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-2"><span data-translate="modal_bus_emergency">Téléphone à contacter en cas d'urgence 24H24 7J/7</span> *</label>
-                        <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
+                        <input type="tel" name="telephone_urgence" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent" required>
                     </div>
                     
                     <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
@@ -1272,86 +1284,68 @@
     </div>
 
     <!-- Section Formulaire de Contact -->
-<section id="contact" class="py-12 sm:py-16 lg:py-20 relative" style="background-image: url('https://i.ibb.co/sppV0p5L/Gemini-Generated-Image-o98pano98pano98p.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-    <!-- Overlay blanc transparent -->
-    <div class="absolute inset-0 bg-white bg-opacity-30"></div>
+    <section id="contact" class="py-12 sm:py-16 lg:py-20 relative" style="background-image: url('https://i.ibb.co/sppV0p5L/Gemini-Generated-Image-o98pano98pano98p.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="absolute inset-0 bg-white bg-opacity-30"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-8 sm:mb-12">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-bus-dark mb-4" data-translate="contact_title" style="text-shadow: 2px 2px 4px rgba(255,255,255,0.8);">
+                        Demander plus d'informations
+                    </h2>
+                    <p class="text-base sm:text-lg md:text-xl text-bus-dark font-semibold" data-translate="contact_subtitle" style="text-shadow: 1px 1px 2px rgba(255,255,255,0.8);">
+                        Nous pouvons également venir vous présenter Buses Solutions directement.
+                    </p>
+                </div>
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="max-w-4xl mx-auto">
-            <!-- Titre -->
-            <div class="text-center mb-8 sm:mb-12">
-                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-bus-dark mb-4" data-translate="contact_title" style="text-shadow: 2px 2px 4px rgba(255,255,255,0.8);">
-                    Demander plus d'informations
-                </h2>
-                <p class="text-base sm:text-lg md:text-xl text-bus-dark font-semibold" data-translate="contact_subtitle" style="text-shadow: 1px 1px 2px rgba(255,255,255,0.8);">
-                    Nous pouvons également venir vous présenter Buses Solutions directement.
-                </p>
-            </div>
-
-            <!-- Formulaire -->
-            <div class="bg-gradient-to-br from-gray-50 to-white bg-opacity-70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-12 shadow-xl">
-                <form action="https://formspree.io/f/myzjgeka" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    
-                    <!-- Nom de l'entreprise -->
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">
-                            <span data-translate="form_name">Nom raison sociale de l'entreprise</span> *
-                        </label>
-                        <input type="text" name="Entreprise" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="Nom de votre entreprise">
-                    </div>
-                    
-                    <!-- Email -->
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">
-                            <span data-translate="form_email">Email</span> *
-                        </label>
-                        <input type="email" name="_replyto" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="votre@email.com">
-                    </div>
-                    
-                    <!-- Téléphone -->
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">
-                            <span data-translate="form_phone">Téléphone</span> *
-                        </label>
-                        <input type="tel" name="Téléphone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="+33 1 23 45 67 89">
-                    </div>
-                    
-                    <!-- Message -->
-                    <div class="md:col-span-2">
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">
-                            <span data-translate="form_message">Message</span> *
-                        </label>
-                        <textarea name="Message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="Votre message..."></textarea>
-                    </div>
-
-                    <!-- Case à cocher -->
-                    <div class="md:col-span-2">
-                        <label class="flex items-center cursor-pointer">
-                            <input type="checkbox" name="Recontact" value="Oui" class="w-5 h-5 text-bus-orange border-gray-300 rounded focus:ring-bus-orange">
-                            <span class="ml-3 text-sm text-gray-700" data-translate="form_contact_me">
-                                Je souhaite être recontacté par un expert Buses Solutions
-                            </span>
-                        </label>
-                    </div>
-
-                    <!-- Champs cachés pour personnaliser l'envoi -->
-                    <input type="hidden" name="_subject" value="Nouveau message via le site Bus Solutions">
-                    <input type="hidden" name="_cc" value="bouchta415@gmail.com,newstart6511@gmail.com">
-
-                    <!-- Bouton -->
-                    <div class="md:col-span-2 text-center">
-                        <button type="submit" class="bg-bus-orange hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg" data-translate="form_submit">
-                            Je souhaite en savoir plus
-                        </button>
-                        <p class="text-sm text-gray-500 mt-4">
-                            ⚡ Réponse sous 2h en moyenne • 🔒 Données sécurisées
-                        </p>
-                    </div>
-                </form>
+                <div class="bg-gradient-to-br from-gray-50 to-white bg-opacity-70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-12 shadow-xl">
+                    <form action="https://formspree.io/f/myzjgeka" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="hidden" name="_cc" value="bouchta415@gmail.com,newstart6511@gmail.com,gm.harchies@gmail.com">
+                        <input type="hidden" name="_subject" value="Nouvelle demande d'informations - Buses Solutions">
+                        <input type="hidden" name="form_type" value="contact_principal">
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <span data-translate="form_name">Nom raison sociale de l'entreprise</span> *
+                            </label>
+                            <input type="text" name="company_name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="Nom de votre entreprise">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <span data-translate="form_email">Email</span> *
+                            </label>
+                            <input type="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="votre@email.com">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <span data-translate="form_phone">Téléphone</span> *
+                            </label>
+                            <input type="tel" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="+33 1 23 45 67 89">
+                        </div>
+                        
+                        <div class="md:col-span-2">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" name="contact_request" value="oui" class="w-5 h-5 text-bus-orange border-gray-300 rounded focus:ring-bus-orange">
+                                <span class="ml-3 text-sm text-gray-700" data-translate="form_contact_me">
+                                    Je souhaite être recontacté par un expert Buses Solutions
+                                </span>
+                            </label>
+                        </div>
+                        
+                        <div class="md:col-span-2 text-center">
+                            <button type="submit" class="bg-bus-orange hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg" data-translate="form_submit">
+                                Je souhaite en savoir plus
+                            </button>
+                            <p class="text-sm text-gray-500 mt-4">
+                                ⚡ Réponse sous 2h en moyenne • 🔒 Données sécurisées
+                            </p>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-bus-dark text-white py-12 sm:py-16">
@@ -1421,12 +1415,6 @@
             });
         });
 
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Merci pour votre demande ! Nous vous recontacterons rapidement.');
-        });
-
         // Fonctions pour les modals
         function openParticuliersForm() {
             document.getElementById('particuliersModal').classList.remove('hidden');
@@ -1476,25 +1464,6 @@
                 closeAutocaristesForm();
             }
         });
-
-        // Gestion des soumissions de formulaires dans les modals
-        document.querySelector('#particuliersModal form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Merci pour votre demande de location ! Nous vous recontacterons rapidement avec des propositions d\'autocars adaptées à vos besoins.');
-            closeParticuliersForm();
-        });
-
-        document.querySelector('#prestatairesModal form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Merci pour votre candidature ! Nous vous recontacterons rapidement pour organiser un rendez-vous.');
-            closePrestatairesForm();
-        });
-
-        document.querySelector('#autocaristesModal form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Merci pour votre candidature ! Nous vous recontacterons rapidement pour finaliser votre adhésion.');
-            closeAutocaristesForm();
-        });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97f662bc159fb744',t:'MTc1NzkyMTA3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97f687f417db7b7c',t:'MTc1NzkyMjYwNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
