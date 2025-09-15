@@ -1291,6 +1291,13 @@
         }
 
         // Fermer les modals en cliquant à l'extérieur
+            document.getElementById('particuliersModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeParticuliersForm();
+            }
+        });
+
+        
         document.getElementById('prestatairesModal').addEventListener('click', function(e) {
             if (e.target === this) {
                 closePrestatairesForm();
