@@ -1311,6 +1311,12 @@
         });
 
         // Gestion des soumissions de formulaires dans les modals
+        document.querySelector('#particuliersModal form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre demande de location ! Nous vous recontacterons rapidement avec des propositions d\'autocars adaptées à vos besoins.');
+            closeParticuliersForm();
+        });
+
         document.querySelector('#prestatairesModal form').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Merci pour votre candidature ! Nous vous recontacterons rapidement pour organiser un rendez-vous.');
