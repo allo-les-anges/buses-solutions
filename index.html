@@ -1272,70 +1272,86 @@
     </div>
 
     <!-- Section Formulaire de Contact -->
-    <section id="contact" class="py-12 sm:py-16 lg:py-20 relative" style="background-image: url('https://i.ibb.co/sppV0p5L/Gemini-Generated-Image-o98pano98pano98p.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        <div class="absolute inset-0 bg-white bg-opacity-30"></div>
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-8 sm:mb-12">
-                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-bus-dark mb-4" data-translate="contact_title" style="text-shadow: 2px 2px 4px rgba(255,255,255,0.8);">
-                        Demander plus d'informations
-                    </h2>
-                    <p class="text-base sm:text-lg md:text-xl text-bus-dark font-semibold" data-translate="contact_subtitle" style="text-shadow: 1px 1px 2px rgba(255,255,255,0.8);">
-                        Nous pouvons également venir vous présenter Buses Solutions directement.
-                    </p>
-                </div>
+<section id="contact" class="py-12 sm:py-16 lg:py-20 relative" style="background-image: url('https://i.ibb.co/sppV0p5L/Gemini-Generated-Image-o98pano98pano98p.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <!-- Overlay blanc transparent -->
+    <div class="absolute inset-0 bg-white bg-opacity-30"></div>
 
-                <div class="bg-gradient-to-br from-gray-50 to-white bg-opacity-70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-12 shadow-xl">
-                    <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">
-                                <span data-translate="form_name">Nom raison sociale de l'entreprise</span> *
-                            </label>
-                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="Nom de votre entreprise">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">
-                                <span data-translate="form_email">Email</span> *
-                            </label>
-                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="votre@email.com">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">
-                                <span data-translate="form_phone">Téléphone</span> *
-                            </label>
-                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="+33 1 23 45 67 89">
-                        </div>
-                        
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-4xl mx-auto">
+            <!-- Titre -->
+            <div class="text-center mb-8 sm:mb-12">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-bus-dark mb-4" data-translate="contact_title" style="text-shadow: 2px 2px 4px rgba(255,255,255,0.8);">
+                    Demander plus d'informations
+                </h2>
+                <p class="text-base sm:text-lg md:text-xl text-bus-dark font-semibold" data-translate="contact_subtitle" style="text-shadow: 1px 1px 2px rgba(255,255,255,0.8);">
+                    Nous pouvons également venir vous présenter Buses Solutions directement.
+                </p>
+            </div>
 
-                        
+            <!-- Formulaire -->
+            <div class="bg-gradient-to-br from-gray-50 to-white bg-opacity-70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-12 shadow-xl">
+                <form action="https://formspree.io/f/myzjgeka" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- Nom de l'entreprise -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">
+                            <span data-translate="form_name">Nom raison sociale de l'entreprise</span> *
+                        </label>
+                        <input type="text" name="Entreprise" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="Nom de votre entreprise">
+                    </div>
+                    
+                    <!-- Email -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">
+                            <span data-translate="form_email">Email</span> *
+                        </label>
+                        <input type="email" name="_replyto" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="votre@email.com">
+                    </div>
+                    
+                    <!-- Téléphone -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">
+                            <span data-translate="form_phone">Téléphone</span> *
+                        </label>
+                        <input type="tel" name="Téléphone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="+33 1 23 45 67 89">
+                    </div>
+                    
+                    <!-- Message -->
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">
+                            <span data-translate="form_message">Message</span> *
+                        </label>
+                        <textarea name="Message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bus-orange focus:border-transparent transition-all" required placeholder="Votre message..."></textarea>
+                    </div>
 
-                        
+                    <!-- Case à cocher -->
+                    <div class="md:col-span-2">
+                        <label class="flex items-center cursor-pointer">
+                            <input type="checkbox" name="Recontact" value="Oui" class="w-5 h-5 text-bus-orange border-gray-300 rounded focus:ring-bus-orange">
+                            <span class="ml-3 text-sm text-gray-700" data-translate="form_contact_me">
+                                Je souhaite être recontacté par un expert Buses Solutions
+                            </span>
+                        </label>
+                    </div>
 
-                        
-                        <div class="md:col-span-2">
-                            <label class="flex items-center cursor-pointer">
-                                <input type="checkbox" class="w-5 h-5 text-bus-orange border-gray-300 rounded focus:ring-bus-orange">
-                                <span class="ml-3 text-sm text-gray-700" data-translate="form_contact_me">
-                                    Je souhaite être recontacté par un expert Buses Solutions
-                                </span>
-                            </label>
-                        </div>
-                        
-                        <div class="md:col-span-2 text-center">
-                            <button type="submit" class="bg-bus-orange hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg" data-translate="form_submit">
-                                Je souhaite en savoir plus
-                            </button>
-                            <p class="text-sm text-gray-500 mt-4">
-                                ⚡ Réponse sous 2h en moyenne • 🔒 Données sécurisées
-                            </p>
-                        </div>
-                    </form>
-                </div>
+                    <!-- Champs cachés pour personnaliser l'envoi -->
+                    <input type="hidden" name="_subject" value="Nouveau message via le site Bus Solutions">
+                    <input type="hidden" name="_cc" value="bouchta415@gmail.com,newstart6511@gmail.com">
+
+                    <!-- Bouton -->
+                    <div class="md:col-span-2 text-center">
+                        <button type="submit" class="bg-bus-orange hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg" data-translate="form_submit">
+                            Je souhaite en savoir plus
+                        </button>
+                        <p class="text-sm text-gray-500 mt-4">
+                            ⚡ Réponse sous 2h en moyenne • 🔒 Données sécurisées
+                        </p>
+                    </div>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="bg-bus-dark text-white py-12 sm:py-16">
