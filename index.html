@@ -1259,6 +1259,17 @@
         });
 
         // Fonctions pour les modals
+        function openParticuliersForm() {
+            document.getElementById('particuliersModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeParticuliersForm() {
+            document.getElementById('particuliersModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        
         function openPrestatairesForm() {
             document.getElementById('prestatairesModal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
