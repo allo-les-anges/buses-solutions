@@ -35,7 +35,7 @@
                 hero_description: "Un savoir faire à votre disposition",
                 hero_problem: "Un problème ? Nous sommes votre solution !",
                 hero_cta: "Plus d'infos",
-                hero_rental_cta: "Vous recherchez un Autocar à louer, cliquez ici",
+                hero_rental_cta: "🚌 Vous recherchez un Autocar à louer, cliquez ici",
                 feature_24h: "Assistance 24h/24",
                 feature_24h_desc: "7j/7",
                 feature_network: "Réseau certifié",
@@ -573,27 +573,29 @@
                 }
             });
             
-            // Mettre à jour les boutons de langue
+            // Mettre à jour les boutons de langue mobile
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('bg-bus-orange', 'text-white', 'shadow-md');
-                btn.classList.add('bg-gray-200');
-                if (btn.classList.contains('hover:bg-gray-300')) {
-                    // Pour les boutons desktop (drapeaux uniquement)
-                    btn.classList.add('hover:bg-gray-300');
-                } else {
-                    // Pour les boutons mobile (avec texte)
-                    btn.classList.add('text-gray-700');
-                }
+                btn.classList.add('bg-gray-200', 'text-gray-700');
+            });
+            
+            // Mettre à jour les boutons de langue desktop
+            document.querySelectorAll('.lang-btn-desktop').forEach(btn => {
+                btn.classList.remove('bg-bus-orange', 'shadow-md');
+                btn.classList.add('bg-gray-200', 'hover:bg-gray-300');
             });
             
             // Activer le bouton de la langue sélectionnée
             const selectedBtns = document.querySelectorAll(`[data-lang="${lang}"]`);
             selectedBtns.forEach(btn => {
-                btn.classList.remove('bg-gray-200', 'text-gray-700', 'hover:bg-gray-300');
-                btn.classList.add('bg-bus-orange', 'shadow-md');
-                if (!btn.classList.contains('w-8')) {
+                if (btn.classList.contains('lang-btn-desktop')) {
+                    // Pour les boutons desktop (drapeaux uniquement)
+                    btn.classList.remove('bg-gray-200', 'hover:bg-gray-300');
+                    btn.classList.add('bg-bus-orange', 'shadow-md');
+                } else {
                     // Pour les boutons mobile (avec texte)
-                    btn.classList.add('text-white');
+                    btn.classList.remove('bg-gray-200', 'text-gray-700');
+                    btn.classList.add('bg-bus-orange', 'text-white', 'shadow-md');
                 }
             });
         }
@@ -675,11 +677,11 @@
                 <div class="hidden md:flex items-center space-x-4">
                     <!-- Sélecteur de langue desktop avec drapeaux cliquables -->
                     <div class="flex space-x-2 bg-gray-100 rounded-lg p-2">
-                        <button onclick="changeLanguage('fr')" data-lang="fr" class="lang-btn w-8 h-8 rounded-md text-lg hover:scale-110 transition-all duration-200 bg-bus-orange shadow-md" title="Français">🇫🇷</button>
-                        <button onclick="changeLanguage('en')" data-lang="en" class="lang-btn w-8 h-8 rounded-md text-lg hover:scale-110 transition-all duration-200 bg-gray-200 hover:bg-gray-300" title="English">🇬🇧</button>
-                        <button onclick="changeLanguage('es')" data-lang="es" class="lang-btn w-8 h-8 rounded-md text-lg hover:scale-110 transition-all duration-200 bg-gray-200 hover:bg-gray-300" title="Español">🇪🇸</button>
-                        <button onclick="changeLanguage('de')" data-lang="de" class="lang-btn w-8 h-8 rounded-md text-lg hover:scale-110 transition-all duration-200 bg-gray-200 hover:bg-gray-300" title="Deutsch">🇩🇪</button>
-                        <button onclick="changeLanguage('it')" data-lang="it" class="lang-btn w-8 h-8 rounded-md text-lg hover:scale-110 transition-all duration-200 bg-gray-200 hover:bg-gray-300" title="Italiano">🇮🇹</button>
+                        <button onclick="changeLanguage('fr')" data-lang="fr" class="lang-btn-desktop w-10 h-10 rounded-md text-xl hover:scale-110 transition-all duration-200 bg-bus-orange shadow-md flex items-center justify-center" title="Français">🇫🇷</button>
+                        <button onclick="changeLanguage('en')" data-lang="en" class="lang-btn-desktop w-10 h-10 rounded-md text-xl hover:scale-110 transition-all duration-200 bg-gray-200 hover:bg-gray-300 flex items-center justify-center" title="English">🇬🇧</button>
+                        <button onclick="changeLanguage('es')" data-lang="es" class="lang-btn-desktop w-10 h-10 rounded-md text-xl hover:scale-110 transition-all duration-200 bg-gray-200 hover:bg-gray-300 flex items-center justify-center" title="Español">🇪🇸</button>
+                        <button onclick="changeLanguage('de')" data-lang="de" class="lang-btn-desktop w-10 h-10 rounded-md text-xl hover:scale-110 transition-all duration-200 bg-gray-200 hover:bg-gray-300 flex items-center justify-center" title="Deutsch">🇩🇪</button>
+                        <button onclick="changeLanguage('it')" data-lang="it" class="lang-btn-desktop w-10 h-10 rounded-md text-xl hover:scale-110 transition-all duration-200 bg-gray-200 hover:bg-gray-300 flex items-center justify-center" title="Italiano">🇮🇹</button>
                     </div>
                     
                     <div class="flex space-x-6 lg:space-x-8">
@@ -729,7 +731,7 @@
                     </h1>
                     
                     <h2 class="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold text-white mb-4 sm:mb-6 md:mb-8 fade-in leading-tight" style="animation-delay: 0.2s;" data-translate="hero_subtitle">
-                        Assistance professionnelle aux autocaristes à travers l'Europe
+                        Assistance professionnelle aux autocars en Europe
                     </h2>
                     
                     <p class="text-sm xs:text-base sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6 md:mb-8 fade-in leading-relaxed" style="animation-delay: 0.4s;" data-translate="hero_description">
@@ -794,7 +796,7 @@
                     
                     <div class="fade-in flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start" style="animation-delay: 1.6s;">
                         <a href="#contact" class="bg-bus-orange hover:bg-orange-600 text-white font-bold py-2 xs:py-3 sm:py-4 px-4 xs:px-6 sm:px-8 rounded-lg text-sm xs:text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg pulse-orange" data-translate="hero_cta">
-                            Plus d'infos
+                            Demander une démo gratuite
                         </a>
                         
                         <!-- Bouton pour particuliers -->
@@ -926,7 +928,7 @@
         <div class="absolute inset-0 bg-white bg-opacity-30"></div>
         <div class="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-8 sm:mb-12 md:mb-16">
-                <h2 class="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-bus-dark mb-2 sm:mb-4 leading-tight" data-translate="partners_title" style="text-shadow: 2px 2px 4px rgba(255,255,255,0.8);">
+                <h2 class="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-4 leading-tight" data-translate="partners_title" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
                     Nos Partenaires <span class="text-bus-orange">Principaux</span>
                 </h2>
                 <p class="text-sm xs:text-base sm:text-lg md:text-xl text-bus-dark max-w-4xl mx-auto mb-4 sm:mb-6 md:mb-8 leading-relaxed font-semibold" data-translate="partners_subtitle" style="text-shadow: 1px 1px 2px rgba(255,255,255,0.8);">
@@ -1316,7 +1318,7 @@
                     </p>
                 </div>
 
-                <div class="bg-gradient-to-br from-gray-50 to-white bg-opacity-30 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-12 shadow-xl">
+                <div class="bg-white bg-opacity-60 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-12 shadow-xl border border-white border-opacity-30">
                     <form action="https://formspree.io/f/myzjgeka" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <input type="hidden" name="_next" value="https://buses-solutions.fr/merci">
                         <input type="hidden" name="_subject" value="Nouvelle demande d'informations - Buses Solutions">
@@ -1484,6 +1486,220 @@
                 closeAutocaristesForm();
             }
         });
+
+        // Fermer les modals légales en cliquant à l'extérieur
+        document.getElementById('mentionsLegalesModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeMentionsLegales();
+            }
+        });
+
+        document.getElementById('politiqueConfidentialiteModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePolitiqueConfidentialite();
+            }
+        });
+
+        document.getElementById('cguModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCGU();
+            }
+        });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97fe60deb06fb75c',t:'MTc1ODAwNDg4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+    <!-- Modal Mentions Légales -->
+    <div id="mentionsLegalesModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6 sm:p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-bus-dark">Mentions légales</h3>
+                    <button onclick="closeMentionsLegales()" class="text-gray-500 hover:text-gray-700">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="prose max-w-none text-gray-700 space-y-6">
+                    <p class="text-sm text-gray-500 italic">Obligatoires en Europe, article 6 de la LCEN en France et RGPD au niveau européen</p>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold text-bus-dark mb-3">Éditeur du site :</h4>
+                        <div class="bg-gray-50 p-4 rounded-lg space-y-2">
+                            <p><strong>Bus Solutions</strong></p>
+                            <p><strong>Adresse du siège social :</strong> 48 route de Chichery, 89380 Appoigny, France</p>
+                            <p><strong>Numéro d'immatriculation :</strong> TVA: FR 43990201295</p>
+                            <p><strong>Représentant légal :</strong> [Nom du dirigeant], Gérant</p>
+                            <p><strong>E-mail :</strong> contact@buses-solutions.fr</p>
+                            <p><strong>Téléphone :</strong> +33 6 40 74 06 92</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold text-bus-dark mb-3">Hébergement :</h4>
+                        <div class="bg-gray-50 p-4 rounded-lg space-y-2">
+                            <p><strong>Nom de l'hébergeur :</strong> Vercel Inc.</p>
+                            <p><strong>Adresse :</strong> 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold text-bus-dark mb-3">Propriété intellectuelle :</h4>
+                        <p>Le contenu du site (textes, images, graphismes, logo, structure, etc.) est la propriété exclusive de Bus Solutions, sauf mentions contraires. Toute reproduction ou utilisation sans autorisation est interdite.</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold text-bus-dark mb-3">Responsabilité :</h4>
+                        <p>Bus Solutions s'efforce d'assurer l'exactitude des informations publiées sur ce site. Toutefois, aucune garantie n'est donnée et la société décline toute responsabilité en cas d'erreurs, d'omissions ou d'indisponibilité du service.</p>
+                    </div>
+                </div>
+                
+                <div class="flex justify-end pt-6 border-t border-gray-200 mt-6">
+                    <button onclick="closeMentionsLegales()" class="px-6 py-3 bg-bus-orange text-white rounded-lg hover:bg-orange-600 transition-all">
+                        Fermer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Politique de Confidentialité -->
+    <div id="politiqueConfidentialiteModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6 sm:p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-bus-dark">Politique de confidentialité (RGPD)</h3>
+                    <button onclick="closePolitiqueConfidentialite()" class="text-gray-500 hover:text-gray-700">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="prose max-w-none text-gray-700 space-y-6">
+                    <div>
+                        <h4 class="text-lg font-semibold text-bus-dark mb-3">1. Collecte des données</h4>
+                        <p>Le site collecte uniquement les informations nécessaires via les formulaires (Nom, Prénom, Email, Téléphone, Profil, etc.).</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold text-bus-dark mb-3">2. Finalité</h4>
+                        <p>Les données sont utilisées uniquement pour :</p>
+                        <ul class="list-disc list-inside ml-4 space-y-1">
+                            <li>répondre aux demandes de contact,</li>
+                            <li>évaluer les candidatures prestataires,</li>
+                            <li>informer sur les services Bus Solutions.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold text-bus-dark mb-3">3. Durée de conservation</h4>
+                        <p>Les données sont conservées pour une durée maximale de 3 ans à compter du dernier contact.</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold text-bus-dark mb-3">4. Partage des données</h4>
+                        <p>Les données ne sont transmises à aucun tiers sans consentement explicite, sauf obligation légale ou contractuelle dans le cadre du service.</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold text-bus-dark mb-3">5. Sécurité</h4>
+                        <p>Des mesures techniques et organisationnelles sont mises en œuvre pour protéger les données collectées.</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold text-bus-dark mb-3">6. Droits des utilisateurs (RGPD)</h4>
+                        <p>Conformément au RGPD, chaque utilisateur dispose de droits :</p>
+                        <ul class="list-disc list-inside ml-4 space-y-1">
+                            <li>droit d'accès,</li>
+                            <li>droit de rectification,</li>
+                            <li>droit d'effacement,</li>
+                            <li>droit d'opposition,</li>
+                            <li>droit à la portabilité.</li>
+                        </ul>
+                        <p class="mt-3">Pour exercer ces droits, contactez : <a href="mailto:contact@buses-solutions.fr" class="text-bus-orange hover:underline">contact@buses-solutions.fr</a></p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold text-bus-dark mb-3">7. Cookies</h4>
+                        <p>Le site utilise des cookies strictement nécessaires à son bon fonctionnement. Aucune donnée sensible n'est stockée sans consentement.</p>
+                    </div>
+                </div>
+                
+                <div class="flex justify-end pt-6 border-t border-gray-200 mt-6">
+                    <button onclick="closePolitiqueConfidentialite()" class="px-6 py-3 bg-bus-orange text-white rounded-lg hover:bg-orange-600 transition-all">
+                        Fermer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal CGU -->
+    <div id="cguModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6 sm:p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-bus-dark">Conditions Générales d'Utilisation (CGU)</h3>
+                    <button onclick="closeCGU()" class="text-gray-500 hover:text-gray-700">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="prose max-w-none text-gray-700 space-y-6">
+                    <div>
+                        <h4 class="text-lg font-semibold text-bus-dark mb-3">1. Objet</h4>
+                        <p>Le site BusesSolutions.com (ci-après « le Site ») est édité par BusSolutions, dont l'objectif est de présenter les services d'assistance aux autocaristes et de permettre aux utilisateurs (transporteurs, prestataires, partenaires) de prendre contact via différents formulaires.</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold text-bus-dark mb-3">2. Accès au Site</h4>
+                        <ul class="list-disc list-inside ml-4 space-y-1">
+                            <li>L'accès au Site est gratuit.</li>
+                            <li>L'utilisateur s'engage à ne pas utiliser le Site de manière frauduleuse, ni à nuire à son bon fonctionnement.</li>
+                            <li>BusSolutions se réserve le droit de suspendre l'accès au Site pour des raisons techniques ou de maintenance.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold text-bus-dark mb-3">3. Services proposés</h4>
+                        <p>Le Site permet notamment :</p>
+                        <ul class="list-disc list-inside ml-4 space-y-1">
+                            <li>de découvrir les services proposés par BusSolutions,</li>
+                            <li>de demander à être contacté pour plus d'informations,</li>
+                            <li>de proposer sa candidature en tant que prestataire partenaire.</li>
+                        </ul>
+                        <p class="mt-3">Les informations présentées sur le Site le sont à titre indicatif et peuvent évoluer.</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold text-bus-dark mb-3">4. Responsabilités</h4>
+                        <ul class="list-disc list-inside ml-4 space-y-1">
+                            <li>BusSolutions s'efforce d'assurer l'exactitude des informations diffusées, mais ne peut garantir l'absence totale d'erreurs ou d'omissions.</li>
+                            <li>L'utilisateur est seul responsable de l'usage qu'il fait des informations disponibles sur le Site.</li>
+                            <li>BusSolutions ne pourra être tenue responsable en cas d'interruption, d'indisponibilité temporaire, ou de tout dommage direct ou indirect résultant de l'utilisation du Site.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold text-bus-dark mb-3">5. Propriété intellectuelle</h4>
+                        <ul class="list-disc list-inside ml-4 space-y-1">
+                            <li>Tous les contenus du Site (textes, images, logos, design, charte graphique) sont protégés par le droit d'auteur et la propriété intellectuelle.</li>
+                            <li>Toute reproduction, représentation ou exploitation sans autorisation écrite est interdite.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="flex justify-end pt-6 border-t border-gray-200 mt-6">
+                    <button onclick="closeCGU()" class="px-6 py-3 bg-bus-orange text-white rounded-lg hover:bg-orange-600 transition-all">
+                        Fermer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97fe841f525574fa',t:'MTc1ODAwNjMzMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
